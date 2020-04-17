@@ -1,1 +1,5 @@
-<p>menu works!</p>
+<ng-container *ngFor="let item of menuList">
+    <div routerLink="{{ item.url }}" routerLinkActive="active">
+        {{ item.descrizione }}
+    </div>
+</ng-container>
