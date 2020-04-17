@@ -62,4 +62,14 @@ export class ProfiloService {
       this.router.navigateByUrl('/login');
     }
   }
+
+  registraUtente(utente: Utente) {
+    for (let i = 0; i < this.utentiRegistrati.length; i++) {
+      if ( this.utentiRegistrati[i].email === utente.email) {
+        return false;
+      }
+    }
+    this.utentiRegistrati.push(utente);
+    return true
+  }
 }

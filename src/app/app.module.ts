@@ -27,7 +27,6 @@ import { CardsComponent } from './components/cards/cards.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
