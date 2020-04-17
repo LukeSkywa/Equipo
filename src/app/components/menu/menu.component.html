@@ -1,8 +1,10 @@
-<div *ngIf="currentRoute!='/login'">
-    <ng-container *ngFor="let item of menuList">
-        <div routerLink="{{ item.url }}" routerLinkActive="active">
-            {{ item.descrizione }}
-        </div>
+<div *ngIf="currentRoute!='/login'" class="topnav">
+    <ng-container>
+        <ng-container *ngFor="let item of menuList">
+            <div routerLink="{{ item.url }}" routerLinkActive="active">
+                {{ item.descrizione }}
+            </div>
+        </ng-container>
+        <div (click)="logout()">Esci</div>
     </ng-container>
-    <button (click)="logout()">Esci</button>
 </div>
