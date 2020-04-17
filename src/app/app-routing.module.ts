@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './componets/login/login.component';
-import { HomepageComponent } from './componets/homepage/homepage.component';
-import { ListaComponent } from './componets/lista/lista.component';
-import { CardsComponent } from './componets/cards/cards.component';
-import { FeedbackComponent } from './componets/feedback/feedback.component';
-import { ProfiloComponent } from './componets/profilo/profilo.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { ListaComponent } from './components/lista/lista.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { ProfiloComponent } from './components/profilo/profilo.component';
 import { LoginGuard } from './guards/login.guard';
 import { CanactivateLoginGuard } from './guards/canactivate-login.guard';
 
