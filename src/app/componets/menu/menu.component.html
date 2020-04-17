@@ -1,5 +1,7 @@
-<ng-container *ngFor="let item of menuList">
-    <div routerLink="{{ item.url }}" routerLinkActive="active">
-        {{ item.descrizione }}
-    </div>
-</ng-container>
+<div *ngIf="currentRoute!='/login'">
+    <ng-container *ngFor="let item of menuList">
+        <div routerLink="{{ item.url }}" routerLinkActive="active">
+            {{ item.descrizione }}
+        </div>
+    </ng-container>
+</div>

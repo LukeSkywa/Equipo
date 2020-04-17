@@ -12,6 +12,8 @@ export class LoginComponent implements OnInit {
 
   loginForm:FormGroup;
 
+  hide: boolean=true;
+
   get emailControl(): FormControl{
     return this.loginForm.get('email') as FormControl;
   }

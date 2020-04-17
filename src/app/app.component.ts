@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Equipo';
+
+  nascondi(){
+    if(sessionStorage.getItem('user')===null)
+      return false;
+    else
+      return true;
+  }
 }

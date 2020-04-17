@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from 'src/app/services/menu.service';
 import { MenuItem } from 'src/app/models/menu-item';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -9,13 +10,18 @@ import { MenuItem } from 'src/app/models/menu-item';
 })
 export class MenuComponent implements OnInit {
 
+  currentRoute:string=null;
+
   menuList: MenuItem[] = [];
 
-  constructor(private menuListService: MenuService) {
+  constructor(private menuListService: MenuService, private router:Router) {
     this.menuList = this.menuListService.getMenuList();
   }
 
   ngOnInit(): void {
+    this.router.events.subscribe(value => {
+      this.currentRoute=this.router.url.toString();
+    });
   }
 
 }

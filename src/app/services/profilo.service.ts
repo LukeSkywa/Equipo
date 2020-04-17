@@ -44,6 +44,7 @@ export class ProfiloService {
 
   constructor(private router: Router) { }
 
+  //Verifica se l'utente è registrato
   isLogin(isUtente: String,isPass: String) {
     for (let i = 0; i < this.utentiRegistrati.length; i++) 
       if (this.utentiRegistrati[i].email === isUtente && this.utentiRegistrati[i].password === isPass ) 
@@ -51,6 +52,7 @@ export class ProfiloService {
       return false
   }
 
+  //fa la login
   eseguiLogin(ut:string, psw:string){
     if(this.isLogin(ut,psw)){
       sessionStorage.setItem('user', ut);
