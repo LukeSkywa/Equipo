@@ -10,6 +10,7 @@ import { ListaComponent } from './componets/lista/lista.component';
 import { CardsComponent } from './componets/cards/cards.component';
 import { FeedbackComponent } from './componets/feedback/feedback.component';
 import { ProfiloComponent } from './componets/profilo/profilo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProfiloComponent } from './componets/profilo/profilo.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
