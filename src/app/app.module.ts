@@ -27,6 +27,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { ProfiloComponent } from './components/profilo/profilo.component';
     ListaComponent,
     CardsComponent,
     FeedbackComponent,
-    ProfiloComponent
+    ProfiloComponent,
+    
   ],
   imports: [
     BrowserModule,
