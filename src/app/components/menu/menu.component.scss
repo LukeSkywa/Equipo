@@ -1,4 +1,22 @@
-.active {
-    font-weight: bold;
-    background-color: #87cefa;
+.topnav {
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.topnav div {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav div:hover {
+    border-bottom: solid white 1px;
+    cursor: pointer;
+}
+
+.topnav div.active {
+    border-bottom: solid white 1px;
 }
