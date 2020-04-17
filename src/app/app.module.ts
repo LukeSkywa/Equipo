@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './componets/login/login.component';
-import { HomepageComponent } from './componets/homepage/homepage.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { MatSliderModule } from '@angular/material/slider';
@@ -21,11 +21,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
 
-import { MenuComponent } from './componets/menu/menu.component';
-import { ListaComponent } from './componets/lista/lista.component';
-import { CardsComponent } from './componets/cards/cards.component';
-import { FeedbackComponent } from './componets/feedback/feedback.component';
-import { ProfiloComponent } from './componets/profilo/profilo.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ListaComponent } from './components/lista/lista.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { ProfiloComponent } from './components/profilo/profilo.component';
+import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProfiloComponent } from './componets/profilo/profilo.component';
     ListaComponent,
     CardsComponent,
     FeedbackComponent,
-    ProfiloComponent
+    ProfiloComponent,
+    RegistrazioneComponent
   ],
   imports: [
     BrowserModule,
