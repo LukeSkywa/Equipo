@@ -1,9 +1,9 @@
 <H1>LOGIN</H1>
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm" (ngSubmit)="login()">
     <div>
-        <label for="username">Username</label>
-        <input type="text" id="username" formControlName="username" placeholder="Username">
-        <p *ngIf="usernameControl.status === 'INVALID' && usernameControl.dirty">Campo username obbligatorio!</p>
+        <label for="email">Email</label>
+        <input type="text" id="email" formControlName="email" placeholder="mariorossi@gmail.com">
+        <p *ngIf="emailControl.status === 'INVALID' && emailControl.dirty">Campo username obbligatorio!</p>
 
     </div>
 
