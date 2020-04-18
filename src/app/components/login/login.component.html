@@ -24,13 +24,17 @@
                 <mat-icon matPrefix class="iconPerson">lock</mat-icon>
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    
                 </button>
             </mat-form-field>
 
-            <mat-slide-toggle>Memorizza password</mat-slide-toggle>
+            <mat-slide-toggle class="prova">Memorizza password</mat-slide-toggle>
+            
             <div>
+                
                 <input type="submit" class="bottoneLogin" [disabled]="loginForm.status === 'INVALID'" value="Login">
             </div>
+  
         </form>
     </div>
 </section>
