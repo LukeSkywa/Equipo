@@ -1,31 +1,19 @@
-<div class="grid-container">
-    <div class="item3">
-        <div>
-            <mat-carousel color=secondary maxWidth="auto" proportion="20" timings="250ms ease-in" [autoplay]="true"
-                interval="2500" [loop]="true" [hideIndicators]="false" [useKeyboard]="false" [useMouseWheel]="false">
+<div>
+    <h1>Agenzia viaggi</h1>
+</div>
+<div>
+    <mat-carousel color=secondary maxWidth="auto" proportion="30" timings="250ms ease-in" [autoplay]="true"
+        interval="2500" [loop]="true" [hideIndicators]="false" [useKeyboard]="false" [useMouseWheel]="false">
 
-                <mat-carousel-slide [hideOverlay]="true">
-                    <p class="testoSlider">Tutti i tuoi giochi preferiti craccati solo per te!</p>
-                    <img src="../../../assets/immagini/logo.png" alt="">
-                </mat-carousel-slide>
-
-                <mat-carousel-slide [hideOverlay]="true">
-                    <p class="testoSlider">Nella nostra lista troverai i giochi piu apprezzati di sempre, puoi
-                        aggiungerli ai preferiti oppure nasconderli se proprio li detesti</p>
-                        <img src="../../../assets/immagini/logo.png" alt="">
-                </mat-carousel-slide>
-
-                <mat-carousel-slide [hideOverlay]="true">
-                    <p class="testoSlider">Inviaci un feedback, scrivici quale gioco craccato vorresti!</p>
-                    <img src="../../../assets/immagini/logo.png" alt="">
-                </mat-carousel-slide>
-
-                <mat-carousel-slide [hideOverlay]="true">
-                    <p class="testoSlider">Crea il tuo profilo, facciamo crescere questa community di giochi craccati!!!
-                    </p>
-                    <img src="../../../assets/immagini/logo.png" alt="">
-                </mat-carousel-slide>
-            </mat-carousel>
-        </div>
-    </div>
+        <mat-carousel-slide [hideOverlay]="true" *ngFor="let slide of slideList">
+            <div class="wrapper">
+                <div class="one">
+                    <p class="testoSlider">{{ slide.descrizione }}</p>
+                </div>
+                <div class="two">
+                    <img class="imgslide" src="{{ slide.urlImg }}" alt="">
+                </div>
+            </div>
+        </mat-carousel-slide>
+    </mat-carousel>
 </div>
