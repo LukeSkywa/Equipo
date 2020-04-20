@@ -1,4 +1,4 @@
-<div *ngIf="currentRoute!='/login'" class="topnav">
+<div *ngIf="currentRoute!='/login' && currentRoute!='/registrazione'" class="topnav">
     <ng-container>
         <ng-container *ngFor="let item of menuList">
             <div routerLink="{{ item.url }}" routerLinkActive="active">

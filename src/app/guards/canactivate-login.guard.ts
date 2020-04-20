@@ -10,9 +10,10 @@ export class CanactivateLoginGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if(sessionStorage.getItem("user")!=null)
-      {this.router.navigateByUrl('/home');
-       return false;}
+      if(sessionStorage.getItem("user")!=null){
+        this.router.navigateByUrl('/home');
+        return false;
+      }
        return true;
   }
   
