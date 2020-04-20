@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SlideHome } from 'src/app/models/slide-home';
+import { SlideHomeService } from 'src/app/services/slide-home.service';
 
 @Component({
   selector: 'app-homepage',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  slideList: SlideHome[] = [];
+
+  constructor(private slideListService: SlideHomeService) {
+    this.slideList = this.slideListService.getSlideList();
+  }
 
   ngOnInit(): void {
   }
