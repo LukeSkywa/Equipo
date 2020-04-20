@@ -1,39 +1,35 @@
-
-    .spazio-social-lingue {
+.spazio-social-lingue {
     flex: 1 1 auto;
-  }
+}
 
-  .posizione{
+.posizione {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-image: linear-gradient(to right, #052431 , #43779F);
-  }
+    background: linear-gradient( to right, #052431 5%, #43779F 50%);
+}
 
-  .social{
+.social {
     padding: 0 6px;
-  }
+}
 
-  .lingue{
+.lingue {
     padding: 0 2px;
-  }
+}
 
-  .copyright{
+.copyright {
     color: rgba(255, 255, 255, 0.384);
     font-size: 75%;
     padding-left: 30px;
-  }
+}
 
-.footerContainer{
-  min-height: 100%;
+.footerContainer {
+    min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -100px; 
-}
-.footer{
-  height: 100px;
+    margin: 0 auto -100px;
 }
 
-
-
-    
+.footer {
+    height: 100px;
+}
