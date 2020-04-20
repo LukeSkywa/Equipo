@@ -14,7 +14,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
@@ -56,7 +55,6 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
     MatMenuModule,
     MatRadioModule,
     MatSelectModule,
-    BrowserAnimationsModule,
     MatCarouselModule,
   ],
   providers: [],
