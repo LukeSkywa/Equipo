@@ -52,7 +52,6 @@
 }
 
 .bottoneLogin {
-    margin-left: 30px;
     margin-top: 20px;
     cursor: pointer;
     text-align: center;
@@ -62,6 +61,15 @@
     height: 50px;
     font-size: 15px;
     color: cornflowerblue;
+    outline: none;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-right: 20px;
 }
 
 .bottoneRegistrati {
@@ -77,6 +85,7 @@
     padding-left: 298px;
     transform: translateY(-50%);
 }
-.prova{
+
+.prova {
     margin-left: 15px;
 }

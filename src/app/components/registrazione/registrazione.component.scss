@@ -38,6 +38,15 @@
     font-size: 25px;
 }
 
+img {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
 .boxInput {
     width: 100%;
 }
@@ -52,7 +61,6 @@
 }
 
 .bottoneRegistra {
-    margin-left: 30px;
     margin-top: 20px;
     cursor: pointer;
     text-align: center;
@@ -62,6 +70,7 @@
     height: 50px;
     font-size: 15px;
     color: cornflowerblue;
+    outline: none;
 }
 
 .tornaALogin {

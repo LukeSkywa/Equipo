@@ -10,13 +10,25 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    margin-top: 20px;
 }
 
 .topnav div:hover {
     border-bottom: solid white 1px;
     cursor: pointer;
+    outline: none;
 }
 
 .topnav div.active {
+    
     border-bottom: solid white 1px;
+    outline: none;
+}
+img{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    float:right;
+    margin-top: 10px;
+    margin-right: 20px;
 }
