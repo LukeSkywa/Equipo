@@ -1,1 +1,38 @@
-<p>registrazione works!</p>
+<section class="registraContainer">
+    <div class="form">
+        <form [formGroup]="registraForm" (ngSubmit)="registrazione()">
+            <div class="logo">
+
+                <!-- qui il logo -->
+            </div>
+            <div class="posBottone">
+                <button class="tornaALogin" mat-fab matSuffix routerLink="/login">
+                    <mat-icon class="icon">clear</mat-icon>
+                </button>
+            </div>
+            <h3 class="scrittaRegistra">Registrazione</h3>
+
+            <mat-form-field class="boxInput" appearance="fill">
+                <mat-label class="coloreInput">Nome utente</mat-label>
+                <input matInput formControlName="email" type="text" placeholder="Nome utente">
+                <mat-icon matPrefix class="iconPerson">person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="boxInput" appearance="fill">
+                <mat-label class="coloreInput">Password</mat-label>
+                <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" placeholder="Password">
+                <mat-icon matPrefix class="iconPerson">lock</mat-icon>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    
+                </button>
+            </mat-form-field>
+
+            <div>
+
+                <input type="submit" class="bottoneRegistra" [disabled]="registraForm.status === 'INVALID'" value="Registati">
+            </div>
+
+        </form>
+    </div>
+</section>
