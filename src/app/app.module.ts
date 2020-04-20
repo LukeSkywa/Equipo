@@ -19,7 +19,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 import { MenuComponent } from './components/menu/menu.component';
 import { ListaComponent } from './components/lista/lista.component';
@@ -57,6 +57,7 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
     MatRadioModule,
     MatSelectModule,
     BrowserAnimationsModule,
+    MatCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
