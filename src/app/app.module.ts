@@ -28,6 +28,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FeedbackComponent,
     ProfiloComponent,
     RegistrazioneComponent,
-    FooterComponent
+    FooterComponent,
+    ModificaProfiloComponent
   ],
   imports: [
     BrowserModule,
