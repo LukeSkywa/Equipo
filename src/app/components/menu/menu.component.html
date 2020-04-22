@@ -7,6 +7,10 @@
         </ng-container>
         <div (click)="logout()">Esci</div>
         <img src="../../../assets/immagini/logo.png" alt="">
+        <mat-form-field class="cerca" appearance="fill" *ngIf="currentRoute=='/list'">
+            <mat-icon class="lente" matPrefix>search</mat-icon>
+            <input class="ricerca" matInput type="search" placeholder="Cerca">
+        </mat-form-field>
     </ng-container>
 
 </div>
