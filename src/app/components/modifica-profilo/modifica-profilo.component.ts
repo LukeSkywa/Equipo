@@ -11,9 +11,6 @@ import { ProfiloService } from 'src/app/services/profilo.service';
 })
 export class ModificaProfiloComponent implements OnInit {
 
-  @Output()
-  profilo:EventEmitter<Utente>=new EventEmitter();
-
   profiloForm: FormGroup;
   utente:Utente;
 
@@ -37,7 +34,6 @@ export class ModificaProfiloComponent implements OnInit {
   }
 
   modifica(){
-    this.profilo.emit(this.profiloForm.value)
     let profiloModificato:Utente;
     profiloModificato=this.profiloForm.value
     this.listaRegistrati.modificaUtente(profiloModificato);
