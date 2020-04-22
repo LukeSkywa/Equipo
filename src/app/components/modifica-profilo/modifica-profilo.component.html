@@ -3,54 +3,42 @@
     <img class="Profilo" src="assets/profilo/ImmagineProfilo.png">
     <button mat-fab class="foto"><mat-icon class="coloreIcon">camera_alt</mat-icon></button>
 </div>
+
 <form [formGroup]="profiloForm" class="profiloForm">
-    <div>
-        <mat-form-field class="nome" appearance="fill">
-            <mat-label>Nome</mat-label>
-            <input matInput formControlName="nome" class="inputColore" placeholder="Nome" type="text">
-            <mat-icon matPrefix class="icona">person</mat-icon>
-        </mat-form-field>
-    </div>
 
-    <div>
-        <mat-form-field class="cognome" appearance="fill">
-            <mat-label>Cognome</mat-label>
-            <input matInput formControlName="cognome" class="inputColore" placeholder="Cognome" type="text">
-            <mat-icon matPrefix class="icona">person</mat-icon>
-        </mat-form-field>
-    </div>
+    <mat-form-field class="nome" appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome" class="inputColore" placeholder="Nome" type="text">
+    </mat-form-field>
 
-    <div>
-        <mat-form-field class="sesso" appearance="fill">
-            <mat-icon matPrefix class="icona">wc</mat-icon>
-            <mat-label>Sesso</mat-label>
-            <select formControlName="sesso" class="selectColore" matNativeControl required>
-                        <option value="niente">--</option>
-                        <option value="Maschio">Maschio</option>
-                        <option value="Femmina">Femmina</option>
-                        <option value="Altro">Altro</option>
-                    </select>
-        </mat-form-field>
-    </div>
+    <mat-form-field class="cognome" appearance="fill">
+        <mat-label>Cognome</mat-label>
+        <input matInput formControlName="cognome" class="inputColore" placeholder="Cognome" type="text">
+    </mat-form-field>
 
-    <div>
-        <mat-form-field class="email" appearance="fill">
-            <mat-label>E-Mail</mat-label>
-            <input type="email" matInput formControlName="email" class="inputColore" placeholder="Email">
-            <mat-icon matPrefix class="icona">email</mat-icon>
-        </mat-form-field>
-    </div>
+    <mat-form-field class="sesso" appearance="fill">
+        <mat-label>Sesso</mat-label>
+        <select formControlName="sesso" class="selectColore" matNativeControl required>
+                    <option value="niente">--</option>
+                    <option value="Maschio">Maschio</option>
+                    <option value="Femmina">Femmina</option>
+                    <option value="Altro">Altro</option>
+                </select>
+    </mat-form-field>
 
-    <div>
-        <mat-form-field class="telefono" appearance="fill">
-            <mat-label>Telefono</mat-label>
-            <input type="text" matInput formControlName="telefono" class="inputColore" placeholder="Telefono">
-            <mat-icon matPrefix class="icona">call</mat-icon>
-        </mat-form-field>
-    </div>
+    <mat-form-field class="email" appearance="fill">
+        <mat-label>E-Mail</mat-label>
+        <input type="email" matInput formControlName="email" class="inputColore" placeholder="Email">
+    </mat-form-field>
 
-    <div class="Bottoni">
-        <button class="bottone annulla" mat-flat-button (click)="annulla()">Anulla</button>
-        <button class="bottone conferma" mat-flat-button (click)="modifica()">Conferma</button>
-    </div>
+    <mat-form-field class="telefono" appearance="fill">
+        <mat-label>Telefono</mat-label>
+        <input type="text" matInput formControlName="telefono" class="inputColore" placeholder="Telefono">
+    </mat-form-field>
+
 </form>
+
+<div class="divBottoni">
+    <button class="bottone annulla" mat-flat-button (click)="annulla()">Anulla</button>
+    <button class="bottone conferma" mat-flat-button (click)="modifica()">Conferma</button>
+</div>

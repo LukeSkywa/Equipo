@@ -56,12 +56,12 @@
     grid-column: 2;
 }
 
-.bottoni {
+.divBottoni {
     display: grid;
     grid-template-columns: 1fr 300px 300px 1fr;
 }
 
-.posBottoneAnnulla {
+.annulla {
     background-color: white;
     font-size: 20px;
     color: #031f38;
@@ -75,7 +75,7 @@
     justify-content: center;
 }
 
-.posBottoneConferma {
+.conferma {
     background-color: white;
     font-size: 20px;
     color: #031f38;
