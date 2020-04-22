@@ -1,0 +1,165 @@
+// .labelOmino {
+//     grid-row: 2;
+//     grid-column: 2;
+//     width: 100px;
+//     height: 100px;
+//     display: flex;
+//     justify-content: center;
+//     margin: auto;
+// }
+// .labelCerchio {
+//     grid-row: 2;
+//     grid-column: 2;
+//     width: 143px;
+//     height: 143px;
+//     display: flex;
+//     justify-content: center;
+//     margin: auto;
+// }
+.head {
+    display: grid;
+    grid-template-columns: 1fr 500px 1fr;
+    grid-template-rows: auto 200px;
+}
+
+.utenteContainer {
+    display: grid;
+    grid-template-columns: 1fr 500px 10px 500px 1fr;
+    grid-template-rows: 70px 70px 70px 70px 70px;
+}
+
+.nomeHead {
+    grid-column: 2;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+
+.posizioneDivider {
+    border-top-color: rgba(0, 0, 0, 0.12);
+}
+
+.posizioneDivider {
+    grid-column: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    border-top-color: white;
+    border-width: 5px;
+    height: 100%;
+}
+
+.labelInput {
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.colore {
+    color: white;
+}
+
+.modifica {
+    background-color: white;
+    font-size: 20px;
+    color: #052431;
+    border-radius: 40px;
+    width: 250px;
+    height: 50px;
+    margin: auto;
+    cursor: pointer;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.bottoneContainer {
+    display: grid;
+    grid-template-columns: 1fr 500px 1fr;
+}
+
+.labelNome {
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.labelCognome {
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.labelSesso {
+    grid-row: 3;
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.labelEmail {
+    grid-row: 4;
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.labelTelefono {
+    grid-row: 5;
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.inputNome {
+    grid-row: 1;
+    grid-column: 4;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.inputCognome {
+    grid-row: 2;
+    grid-column: 4;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.inputSesso {
+    grid-row: 3;
+    grid-column: 4;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.inputEmail {
+    grid-row: 4;
+    grid-column: 4;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.inputTelefono {
+    grid-row: 5;
+    grid-column: 4;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    font-weight: bold;
+}

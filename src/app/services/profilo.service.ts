@@ -12,7 +12,7 @@ export class ProfiloService {
       nome:"Luca",
       cognome:"Fumagalli",
       password:"fumagalli",
-      genere:"",
+      sesso:"Altro",
       email:"lucafu99@gmail.com",
       telefono:"333 444 5555"
     },
@@ -20,7 +20,7 @@ export class ProfiloService {
       nome:"Alessio",
       cognome:"Facchin",
       password:"facchin",
-      genere:"",
+      sesso:"Maschio",
       email:"facchin810@gmail.com",
       telefono:"444 555 6666"
     },
@@ -28,7 +28,7 @@ export class ProfiloService {
       nome:"Mor Peinda",
       cognome:"Diop",
       password:"diop",
-      genere:"",
+      sesso:"Maschio",
       email:"mordiop@gmail.com",
       telefono:"222 333 4444"
     },
@@ -36,7 +36,7 @@ export class ProfiloService {
       nome:"Andrea",
       cognome:"Lo Nivuro",
       password:"lonivuro",
-      genere:"",
+      sesso:"Femmina",
       email:"a.lonivuro@gmail.com",
       telefono:"777 888 9999"
     }
@@ -71,5 +71,12 @@ export class ProfiloService {
     }
     this.utentiRegistrati.push(utente);
     return true
+  }
+
+  getUtente(email:string){
+    for(let i = 0; i < this.utentiRegistrati.length; i++){
+      if(this.utentiRegistrati[i].email === email)
+        return this.utentiRegistrati[i];
+    }
   }
 }

@@ -9,6 +9,7 @@ import { ProfiloComponent } from './components/profilo/profilo.component';
 import { LoginGuard } from './guards/login.guard';
 import { CanactivateLoginGuard } from './guards/canactivate-login.guard';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
+import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'cards', component: CardsComponent,canActivate:[LoginGuard] },
   { path: 'feedback', component: FeedbackComponent,canActivate:[LoginGuard] },
   { path: 'profilo', component: ProfiloComponent,canActivate:[LoginGuard] },
+  { path: 'modifica-profilo', component: ModificaProfiloComponent,canActivate:[LoginGuard] },
   { path: 'registrazione', component: RegistrazioneComponent, canActivate:[CanactivateLoginGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 ]
