@@ -1,1 +1,44 @@
-<p>modifica-profilo works!</p>
+<div class="head">
+    <h2 class="nomeHead">Benvenuto<br>{{utente.nome}} {{utente.cognome}}</h2>
+    <img class="Profilo" src="assets/profilo/ImmagineProfilo.png">
+    <button mat-fab class="foto"><mat-icon class="coloreIcon">camera_alt</mat-icon></button>
+</div>
+
+<form [formGroup]="profiloForm" class="profiloForm">
+
+    <mat-form-field class="nome" appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome" class="inputColore" placeholder="Nome" type="text">
+    </mat-form-field>
+
+    <mat-form-field class="cognome" appearance="fill">
+        <mat-label>Cognome</mat-label>
+        <input matInput formControlName="cognome" class="inputColore" placeholder="Cognome" type="text">
+    </mat-form-field>
+
+    <mat-form-field class="sesso" appearance="fill">
+        <mat-label>Sesso</mat-label>
+        <select formControlName="sesso" class="selectColore" matNativeControl required>
+                    <option value="niente">--</option>
+                    <option value="Maschio">Maschio</option>
+                    <option value="Femmina">Femmina</option>
+                    <option value="Altro">Altro</option>
+                </select>
+    </mat-form-field>
+
+    <mat-form-field class="email" appearance="fill">
+        <mat-label>E-Mail</mat-label>
+        <input type="email" matInput formControlName="email" class="inputColore" placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field class="telefono" appearance="fill">
+        <mat-label>Telefono</mat-label>
+        <input type="text" matInput formControlName="telefono" class="inputColore" placeholder="Telefono">
+    </mat-form-field>
+
+</form>
+
+<div class="divBottoni">
+    <button class="bottone annulla" mat-flat-button (click)="annulla()">Anulla</button>
+    <button class="bottone conferma" mat-flat-button (click)="modifica()">Conferma</button>
+</div>

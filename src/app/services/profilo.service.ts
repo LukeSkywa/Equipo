@@ -79,4 +79,11 @@ export class ProfiloService {
         return this.utentiRegistrati[i];
     }
   }
+
+  modificaUtente(utente:Utente){
+    for(let i = 0; i < this.utentiRegistrati.length; i++){
+      if(this.utentiRegistrati[i].email===utente.email)
+        this.utentiRegistrati[i]=utente;
+    }
+  }
 }
