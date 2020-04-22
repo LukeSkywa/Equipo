@@ -12,7 +12,7 @@ export class ProfiloService {
       nome:"Luca",
       cognome:"Fumagalli",
       password:"fumagalli",
-      sesso:"Altro",
+      sesso:"Maschio",
       email:"lucafu99@gmail.com",
       telefono:"333 444 5555"
     },
