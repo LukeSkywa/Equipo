@@ -7,7 +7,7 @@
     <div *ngSwitchCase="'viaggi'">
         <div class="wrapper sezione" *ngFor="let viaggio of viaggi">
             <div class="  imgViaggio">
-                <!--<img src="assets/img_videogiochi/{{Videogioco.immagine}}">-->
+                <img src="../../../assets/immagini/{{viaggio.immagine}}">
             </div>
             <div class="info">
                 <span class="localita">{{viaggio.localita}}</span>
@@ -42,7 +42,7 @@
     <div *ngSwitchCase="'preferiti'">
         <div class="wrapper sezione" *ngFor="let viaggio of viaggiPreferiti">
             <div class="  imgViaggio">
-                <!--<img src="assets/img_videogiochi/{{Videogioco.immagine}}">-->
+                <img src="../../../assets/immagini/{{viaggio.immagine}}">
             </div>
             <div class="info">
                 <span class="localita">{{viaggio.localita}}</span>
@@ -73,7 +73,7 @@
     <div *ngSwitchCase="'nascosti'">
         <div class="wrapper sezione" *ngFor="let viaggio of viaggiNascosti">
             <div class="  imgViaggio">
-                <!--<img src="assets/img_videogiochi/{{Videogioco.immagine}}">-->
+                <img src="../../../assets/immagini/{{viaggio.immagine}}">
             </div>
             <div class="info">
                 <span class="localita">{{viaggio.localita}}</span>

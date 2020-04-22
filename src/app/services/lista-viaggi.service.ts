@@ -13,7 +13,7 @@ export class ListaViaggiService {
   private list: Viaggio[] = [
     {
       id: 1,
-      immagine: ".jpg",
+      immagine: "egitto.jpg",
       localita: "Egitto",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -27,7 +27,7 @@ export class ListaViaggiService {
     },
     {
       id: 2,
-      immagine: ".jpg",
+      immagine: "Usa.jpg",
       localita: "USA",
       soggiorno: "Una camera per un adulti",
       durata: "2 notti",
@@ -41,7 +41,7 @@ export class ListaViaggiService {
     },
     {
       id: 3,
-      immagine: ".jpg",
+      immagine: "Roma.jpg",
       localita: "Italia",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -55,7 +55,7 @@ export class ListaViaggiService {
     },
     {
       id: 4,
-      immagine: ".jpg",
+      immagine: "Spagna.jpg",
       localita: "Spagna",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -69,7 +69,7 @@ export class ListaViaggiService {
     },
     {
       id: 5,
-      immagine: ".jpg",
+      immagine: "Portogallo.jpg",
       localita: "Portogallo",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -83,7 +83,7 @@ export class ListaViaggiService {
     },
     {
       id: 6,
-      immagine: ".jpg",
+      immagine: "Brasile.jpg",
       localita: "Brasile",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -97,7 +97,7 @@ export class ListaViaggiService {
     },
     {
       id: 7,
-      immagine: ".jpg",
+      immagine: "Cina.jpg",
       localita: "Cina",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -111,7 +111,7 @@ export class ListaViaggiService {
     },
     {
       id: 8,
-      immagine: ".jpg",
+      immagine: "Grecia.jpg",
       localita: "Grecia",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -125,7 +125,7 @@ export class ListaViaggiService {
     },
     {
       id: 9,
-      immagine: ".jpg",
+      immagine: "Albania.jpg",
       localita: "Albania",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -139,7 +139,7 @@ export class ListaViaggiService {
     },
     {
       id: 10,
-      immagine: ".jpg",
+      immagine: "Senegal.jpg",
       localita: "Senegal",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
