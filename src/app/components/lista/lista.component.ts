@@ -9,9 +9,11 @@ import { ListaViaggiService } from 'src/app/services/lista-viaggi.service';
 })
 export class ListaComponent implements OnInit {
   listaToShow: string = "viaggi";
+  
   viaggi: Viaggio[];
   viaggiPreferiti: Viaggio[] = [];
   viaggiNascosti: Viaggio[] = [];
+  
   constructor(private lista: ListaViaggiService) {
     this.viaggi = this.lista.getListaViaggi();
     this.viaggiNascosti = this.lista.getViaggiNascosti();
@@ -38,38 +40,39 @@ export class ListaComponent implements OnInit {
   listaVuota() {
     return this.videogiochi.length == 0;
   }*/
+  
   cambiaLista(lista: string) {
     this.listaToShow = lista;
   }
+
   cambiaPreferito(viaggio: Viaggio) {
     viaggio.preferito = !viaggio.preferito;
     if (viaggio.preferito) {
       this.addViaggioPreferito(viaggio);
-      console.log(this.viaggiPreferiti)
       return true;
-
-    } else if (!viaggio.preferito) {
+    } else {
       this.removeViaggioPreferito(viaggio);
       return false;
     }
   }
+
   cambiaNascosto(viaggio: Viaggio) {
     viaggio.nascosto = !viaggio.nascosto;
     if (viaggio.nascosto) {
       this.addViaggioNascosto(viaggio);
-      console.log(this.viaggiNascosti)
       return true;
-
-    } else if (!viaggio.nascosto) {
+    } else {
       this.removeViaggioNascosto(viaggio);
       return false;
     }
   }
+
   addViaggioPreferito(viaggio: Viaggio) {
     if (!viaggio.nascosto) {
       this.lista.addViaggioPreferito(viaggio);
     }
   }
+
   removeViaggioPreferito(viaggio: Viaggio) {
     if (!viaggio.nascosto) {
       this.lista.removeViaggioPreferito(viaggio);
@@ -77,29 +80,25 @@ export class ListaComponent implements OnInit {
   }
 
   addViaggioNascosto(viaggio: Viaggio) {
-
     this.lista.addViaggioNascosto(viaggio);
-
     this.lista.removeViaggio(viaggio);
-    if (viaggio.preferito == true) {
-
+    if (viaggio.preferito) {
       this.lista.removeViaggioPreferito(viaggio);
     }
   }
+
   removeViaggioNascosto(viaggio: Viaggio) {
-
     this.lista.removeViaggioNascosto(viaggio);
-
-
     this.lista.addViaggio(viaggio);
-
-    if (viaggio.preferito == true) {
+    if (viaggio.preferito) {
       this.lista.addViaggioPreferito(viaggio);
     }
   }
-  addVideogioco(viaggio: Viaggio) {
+
+  addViaggio(viaggio: Viaggio) {
     this.lista.addViaggio(viaggio);
   }
+
   removeViaggio(viaggio: Viaggio) {
     this.lista.removeViaggio(viaggio);
   }

@@ -24,80 +24,81 @@
                     <mat-icon>more_vert</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu" class="bottoneMenu">
-                    <button>
-                        <mat-icon>link</mat-icon>visualizza dettagli
+                    <button mat-menu-item>
+                        <mat-icon>link</mat-icon>Visualizza dettagli
                     </button>
 
-                    <button mat-menu-item >
-                        <mat-icon>clear</mat-icon>nascondi
+                    <button mat-menu-item (click)="cambiaNascosto(viaggio)">
+                        <mat-icon>clear</mat-icon>Nascondi
                     </button>
                 </mat-menu>
             </div>
         </div>
     </div>
-        <!-- <div class="posBottonePiu">
+    <!-- <div class="posBottonePiu">
             <button *ngIf="show < videogiochi.length" (click)="increaseShow()" class="bottoneDiPiu"
                 mat-flat-button>mostra di più</button>
         </div>-->
     <div *ngSwitchCase="'preferiti'">
         <div class="wrapper sezione" *ngFor="let viaggio of viaggiPreferiti">
-                <div class="  imgViaggio">
-                    <!--<img src="assets/img_videogiochi/{{Videogioco.immagine}}">-->
-                </div>
-                <div class="info">
-                    <span class="localita">{{viaggio.localita}}</span>
-                    <span class="descrizione">{{viaggio.descrizione}}</span>
-                </div>
-                <div class="icone">
-                    <button class="preferito" mat-icon-button matSuffix>
-                        <mat-icon>{{viaggio.preferito ? 'favorite' : 'favorite_border'}}</mat-icon>
+            <div class="  imgViaggio">
+                <!--<img src="assets/img_videogiochi/{{Videogioco.immagine}}">-->
+            </div>
+            <div class="info">
+                <span class="localita">{{viaggio.localita}}</span>
+                <span class="descrizione">{{viaggio.descrizione}}</span>
+            </div>
+            <div class="icone">
+                <button class="preferito" mat-icon-button matSuffix (click)="cambiaPreferito(viaggio)">
+                    <mat-icon>{{viaggio.preferito ? 'favorite' : 'favorite_border'}}</mat-icon>
+                </button>
+                <button class="condividi" mat-icon-button matSuffix>
+                    <mat-icon>share</mat-icon>
+                </button>
+                <button mat-button [matMenuTriggerFor]="menu" class="altro" mat-icon-button matSuffix>
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" class="bottoneMenu">
+                    <button mat-menu-item>
+                        <mat-icon>link</mat-icon>Visualizza dettagli
                     </button>
-                    <button class="condividi" mat-icon-button matSuffix>
-                        <mat-icon>share</mat-icon>
-                    </button>
-                    <button mat-button [matMenuTriggerFor]="menu" class="altro" mat-icon-button matSuffix>
-                        <mat-icon>more_vert</mat-icon>
-                    </button>
-                    <mat-menu #menu="matMenu" class="bottoneMenu">
-                        <button>
-                            <mat-icon>link</mat-icon>visualizza dettagli
-                        </button>
 
-                        <button>
-                            <mat-icon>clear</mat-icon>nascondi
-                        </button>
-                    </mat-menu>
-                </div>
+                    <button mat-menu-item (click)="cambiaNascosto(viaggio)">
+                        <mat-icon>clear</mat-icon>Nascondi
+                    </button>
+                </mat-menu>
             </div>
-        </div>    
-        <div *ngSwitchCase="'nascosti'">
-            <div class="wrapper sezione" *ngFor="let viaggio of viaggiNascosti">
-                <div class="  imgViaggio">
-                    <!--<img src="assets/img_videogiochi/{{Videogioco.immagine}}">-->
-                </div>
-                <div class="info">
-                    <span class="localita">{{viaggio.localita}}</span>
-                    <span class="descrizione">{{viaggio.descrizione}}</span>
-                </div>
-                <div class="icone">
-                    <button class="preferito" mat-icon-button matSuffix (click)=" cambiaPreferito(viaggio)">
-                        <mat-icon>{{viaggio.preferito ? 'favorite' : 'favorite_border'}}</mat-icon>
-                    </button>
-                    <button class="condividi" mat-icon-button matSuffix>
-                        <mat-icon>share</mat-icon>
-                    </button>
-                    <button mat-button [matMenuTriggerFor]="menu" class="altro" mat-icon-button matSuffix>
-                        <mat-icon>more_vert</mat-icon>
-                    </button>
-                    <mat-menu #menu="matMenu" class="bottoneMenu">
-                        <button>
-                            <mat-icon>link</mat-icon>visualizza dettagli
-                        </button>
-                        <button>
-                            <mat-icon>clear</mat-icon>nascondi
-                        </button>
-                    </mat-menu>
-                </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="'nascosti'">
+        <div class="wrapper sezione" *ngFor="let viaggio of viaggiNascosti">
+            <div class="  imgViaggio">
+                <!--<img src="assets/img_videogiochi/{{Videogioco.immagine}}">-->
             </div>
-        </div>  
+            <div class="info">
+                <span class="localita">{{viaggio.localita}}</span>
+                <span class="descrizione">{{viaggio.descrizione}}</span>
+            </div>
+            <div class="icone">
+                <button class="preferito" mat-icon-button matSuffix (click)="cambiaPreferito(viaggio)">
+                    <mat-icon>{{viaggio.preferito ? 'favorite' : 'favorite_border'}}</mat-icon>
+                </button>
+                <button class="condividi" mat-icon-button matSuffix>
+                    <mat-icon>share</mat-icon>
+                </button>
+                <button mat-button [matMenuTriggerFor]="menu" class="altro" mat-icon-button matSuffix>
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" class="bottoneMenu">
+                    <button mat-menu-item>
+                        <mat-icon>link</mat-icon>Visualizza dettagli
+                    </button>
+                    <button mat-menu-item (click)="cambiaNascosto(viaggio)">
+                        <mat-icon>clear</mat-icon>Mostra
+                    </button>
+                </mat-menu>
+            </div>
+        </div>
+    </div>
 </div>
+
