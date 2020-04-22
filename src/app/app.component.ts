@@ -9,6 +9,10 @@ export class AppComponent {
   title = 'Equipo';
 
   sfondoBianco = true;
-
+  //isLog: string = sessionStorage.getItem('user');
+  isLog(): boolean {
+    if (sessionStorage.getItem('user'))
+    return true
+  }
   
 }
