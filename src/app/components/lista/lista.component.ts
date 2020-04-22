@@ -29,17 +29,17 @@ export class ListaComponent implements OnInit {
   }
   increaseShowPreferiti() {
     this.showPreferiti += 5;
-  }
+  }*/
 
   listaNascostiVuota() {
-    return this.videogiochiNascosti.length == 0;
+    return this.viaggiNascosti.length == 0;
   }
   listaPreferitiVuota() {
-    return this.videogiochiPreferiti.length == 0;
+    return this.viaggiPreferiti.length == 0;
   }
   listaVuota() {
-    return this.videogiochi.length == 0;
-  }*/
+    return this.viaggi.length == 0;
+  }
   
   cambiaLista(lista: string) {
     this.listaToShow = lista;
