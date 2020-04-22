@@ -4,26 +4,26 @@
     <div class="form">
         <form [formGroup]="profiloForm" class="profiloForm">
             <div>
-                <mat-form-field class="boxInput" appearance="fill">
+                <mat-form-field class="inputBox" appearance="fill">
                     <mat-label>Nome</mat-label>
-                    <input matInput formControlName="nome" class="coloreInput" placeholder="Nome" type="text">
-                    <mat-icon matPrefix class="icon">person</mat-icon>
+                    <input matInput formControlName="nome" class="inputColore" placeholder="Nome" type="text">
+                    <mat-icon matPrefix class="icona">person</mat-icon>
                 </mat-form-field>
             </div>
 
             <div>
-                <mat-form-field class="boxInput" appearance="fill">
+                <mat-form-field class="inputBox" appearance="fill">
                     <mat-label>Cognome</mat-label>
-                    <input matInput formControlName="cognome" class="coloreInput" placeholder="Cognome" type="text">
-                    <mat-icon matPrefix class="icon">person</mat-icon>
+                    <input matInput formControlName="cognome" class="inputColore" placeholder="Cognome" type="text">
+                    <mat-icon matPrefix class="icona">person</mat-icon>
                 </mat-form-field>
             </div>
 
             <div>
-                <mat-form-field class="boxInput" appearance="fill">
-                    <mat-icon matPrefix class="icon">wc</mat-icon>
+                <mat-form-field class="inputBox" appearance="fill">
+                    <mat-icon matPrefix class="icona">wc</mat-icon>
                     <mat-label>Sesso</mat-label>
-                    <select formControlName="sesso" class="coloreSelect" matNativeControl required>
+                    <select formControlName="sesso" class="selectColore" matNativeControl required>
                         <option value="niente">--</option>
                         <option value="Maschio">Maschio</option>
                         <option value="Femmina">Femmina</option>
@@ -33,24 +33,24 @@
             </div>
 
             <div>
-                <mat-form-field class="boxInput" appearance="fill">
+                <mat-form-field class="inputBox" appearance="fill">
                     <mat-label>E-Mail</mat-label>
-                    <input type="email" matInput formControlName="email" class="coloreInput" placeholder="Email">
-                    <mat-icon matPrefix class="icon">email</mat-icon>
+                    <input type="email" matInput formControlName="email" class="inputColore" placeholder="Email">
+                    <mat-icon matPrefix class="icona">email</mat-icon>
                 </mat-form-field>
             </div>
 
             <div>
-                <mat-form-field class="boxInput" appearance="fill">
+                <mat-form-field class="inputBox" appearance="fill">
                     <mat-label>Telefono</mat-label>
-                    <input type="text" matInput formControlName="telefono" class="coloreInput" placeholder="Telefono">
-                    <mat-icon matPrefix class="icon">call</mat-icon>
+                    <input type="text" matInput formControlName="telefono" class="inputColore" placeholder="Telefono">
+                    <mat-icon matPrefix class="icona">call</mat-icon>
                 </mat-form-field>
             </div>
 
-            <div class="bottoniContainer">
-                <button class="bottone bottoneAnnulla" mat-flat-button (click)="annulla()">Anulla</button>
-                <button class="bottone bottoneConferma" mat-flat-button (click)="modifica()">Conferma</button>
+            <div class="Bottoni">
+                <button class="bottone annulla" mat-flat-button (click)="annulla()">Anulla</button>
+                <button class="bottone conferma" mat-flat-button (click)="modifica()">Conferma</button>
             </div>
         </form>
     </div>
