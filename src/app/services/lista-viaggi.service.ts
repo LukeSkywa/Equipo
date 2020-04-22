@@ -7,6 +7,7 @@ import { Viaggio } from '../models/viaggio';
 export class ListaViaggiService {
 
   constructor() { }
+  
   private viaggiPreferiti: Viaggio[] = [];
   private viaggiNascosti: Viaggio[] = [];
   private list: Viaggio[] = [
@@ -155,27 +156,35 @@ export class ListaViaggiService {
   getListaViaggi() {
     return this.list;
   }
+
   getViaggiPreferiti() {
     return this.viaggiPreferiti;
   }
+
   getViaggiNascosti() {
     return this.viaggiNascosti;
   }
+
   removeViaggio(viaggio: Viaggio) {
     this.list.splice(this.list.indexOf(viaggio), 1);
   }
+
   removeViaggioNascosto(viaggio: Viaggio) {
     this.viaggiNascosti.splice(this.viaggiNascosti.indexOf(viaggio), 1);
   }
+
   removeViaggioPreferito(viaggio: Viaggio) {
     this.viaggiPreferiti.splice(this.viaggiPreferiti.indexOf(viaggio), 1);
   }
+
   addViaggio(viaggio: Viaggio) {
     this.list.push(viaggio);
   }
+
   addViaggioNascosto(viaggio: Viaggio) {
     this.viaggiNascosti.push(viaggio);
   }
+
   addViaggioPreferito(viaggio: Viaggio) {
     this.viaggiPreferiti.push(viaggio);
   }
@@ -187,7 +196,8 @@ export class ListaViaggiService {
       }
     });
     return false;
-  } 
+  }
+
   getViaggioNascosto(nome:string){
     this.viaggiNascosti.forEach(element => {
       if(element.localita===nome){
@@ -196,6 +206,7 @@ export class ListaViaggiService {
     });
     return false;
   }
+  
   getViaggio(nomeVideoGioco:string){
     for(let i=0;i<this.list.length;i++)
     {
