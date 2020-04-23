@@ -27,6 +27,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
     CardsComponent,
     FeedbackComponent,
     ProfiloComponent,
-    RegistrazioneComponent
+    RegistrazioneComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
