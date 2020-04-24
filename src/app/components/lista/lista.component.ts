@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Viaggio } from 'src/app/models/viaggio';
 import { ListaViaggiService } from 'src/app/services/lista-viaggi.service';
+import { SearchViaggioService } from 'src/app/services/search-viaggio.service';
 
 @Component({
   selector: 'app-lista',
@@ -14,15 +15,17 @@ export class ListaComponent implements OnInit {
   mostra: number = 5;
   mostraNascosti: number = 5;
   mostraPreferiti: number = 5;
+  search:string;
 
   viaggi: Viaggio[];
   viaggiPreferiti: Viaggio[] = [];
   viaggiNascosti: Viaggio[] = [];
   
-  constructor(private lista: ListaViaggiService) {
+  constructor(private lista: ListaViaggiService, private  myService: SearchViaggioService) {
     this.viaggi = this.lista.getListaViaggi();
     this.viaggiNascosti = this.lista.getViaggiNascosti();
     this.viaggiPreferiti = this.lista.getViaggiPreferiti();
+    this.myService.messaggio$.subscribe(value=>{});
   }
   ngOnInit(): void {
   }

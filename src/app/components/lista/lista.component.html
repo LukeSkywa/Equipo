@@ -1,13 +1,12 @@
 <div class="distanzaBottoni">
     <button class="button" (click)="cambiaLista('viaggi')" mat-flat-button [disabled]=listaVuota()>Tutti</button>
-    <button class="button" (click)="cambiaLista('preferiti')" mat-flat-button
-        [disabled]=listaPreferitiVuota()>Preferiti</button>
-    <button class="button" (click)="cambiaLista('nascosti')" mat-flat-button
-        [disabled]=listaNascostiVuota()>Nascosti</button>
+    <button class="button" (click)="cambiaLista('preferiti')" mat-flat-button [disabled]=listaPreferitiVuota()>Preferiti</button>
+    <button class="button" (click)="cambiaLista('nascosti')" mat-flat-button [disabled]=listaNascostiVuota()>Nascosti</button>
+    <input type="text" name="search" [(ngModel)]="search" autocomplete="off" placeholder="Cerca">
 </div>
 <div [ngSwitch]="listaToShow">
     <div *ngSwitchCase="'viaggi'">
-        <div class="wrapper sezione" *ngFor="let viaggio of viaggi | slice:inizio:mostra | filter:searchText">
+        <div class="wrapper sezione" *ngFor="let viaggio of viaggi | slice:inizio:mostra | filter:search">
             <div class="  imgViaggio">
                 <img src="../../../assets/immagini/{{viaggio.immagine}}">
             </div>
@@ -37,8 +36,7 @@
             </div>
         </div>
         <div class="mostra">
-            <button *ngIf="mostra < viaggi.length" (click)="incrementaContatore()" class="bottoneMostra"
-                mat-flat-button>mostra di più</button>
+            <button *ngIf="mostra < viaggi.length" (click)="incrementaContatore()" class="bottoneMostra" mat-flat-button>mostra di più</button>
         </div>
     </div>
 
@@ -73,8 +71,7 @@
             </div>
         </div>
         <div class="mostra">
-            <button *ngIf="mostraPreferiti < viaggiPreferiti.length" (click)="incrementaPreferiti()"
-                class="bottoneMostra" mat-flat-button>mostra di più</button>
+            <button *ngIf="mostraPreferiti < viaggiPreferiti.length" (click)="incrementaPreferiti()" class="bottoneMostra" mat-flat-button>mostra di più</button>
         </div>
     </div>
 
@@ -108,8 +105,7 @@
             </div>
         </div>
         <div class="mostra">
-            <button *ngIf="mostraNascosti < viaggiNascosti.length" (click)="incrementaNascosti()" class="bottoneMostra"
-                mat-flat-button>mostra di più</button>
+            <button *ngIf="mostraNascosti < viaggiNascosti.length" (click)="incrementaNascosti()" class="bottoneMostra" mat-flat-button>mostra di più</button>
         </div>
     </div>
 </div>

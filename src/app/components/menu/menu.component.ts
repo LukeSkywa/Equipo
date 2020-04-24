@@ -15,9 +15,8 @@ export class MenuComponent implements OnInit {
 
   menuList: MenuItem[] = [];
   testo: string = '';
-  constructor(private menuListService: MenuService, private router:Router, private  myService: SearchViaggioService) {
+  constructor(private menuListService: MenuService, private router:Router) {
     this.menuList = this.menuListService.getMenuList();
-    this.myService.messaggio$.subscribe(value=>{});
   }
 
   ngOnInit(): void {
@@ -26,9 +25,9 @@ export class MenuComponent implements OnInit {
     });
   }
 
-  logout()
-  {sessionStorage.removeItem("user");
-  this.router.navigateByUrl('/login');
+  logout(){
+    sessionStorage.removeItem("user");
+    this.router.navigateByUrl('/login');
   }
   search(inputValue:string){
     

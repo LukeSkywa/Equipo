@@ -10,8 +10,6 @@ export class ListaViaggiService {
   
   private viaggiPreferiti: Viaggio[] = [];
   private viaggiNascosti: Viaggio[] = [];
-  title = 'Angular Search Using ng2-search-filter';
-  searchText; 
   private list: Viaggio[] = [
     {
       id: 1,
