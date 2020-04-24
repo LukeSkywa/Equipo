@@ -19,7 +19,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 import { MenuComponent } from './components/menu/menu.component';
 import { ListaComponent } from './components/lista/lista.component';
@@ -28,6 +28,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FeedbackComponent,
     ProfiloComponent,
     RegistrazioneComponent,
-    FooterComponent
+    FooterComponent,
+    ModificaProfiloComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatMenuModule,
     MatRadioModule,
     MatSelectModule,
-    BrowserAnimationsModule,
+    MatCarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

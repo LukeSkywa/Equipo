@@ -1,0 +1,92 @@
+.wrapper {
+    display: grid;
+    grid-template-columns:  260px 1fr 120px;
+    background-color: #fff;
+    color: #444;
+    margin:0px;
+    } 
+.sezione {
+    background-color: #D4DDE3;
+    color: #001D28;
+    font-size: 100%;
+    margin: 1rem;
+    border-radius: 10px;
+    }
+.imgViaggio {
+    padding: 0.5rem;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    }
+.info {
+    padding: 0.5rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-rows: 0.3fr 1fr;
+    }
+.localita {
+    margin-top: 10px;
+    font-size: large;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-weight: bold;
+    }
+.descrizione {
+    margin-top: 2px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    }
+.icone {
+    padding: 0.5rem;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+.preferito {
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    grid-row: 2;   
+    }
+.condividi {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 2;   
+    }
+.altro {       
+    grid-column-start:3;
+    grid-column-end: 4;
+    grid-row: 2;   
+    }
+img{
+    width: 250px;
+    height: 150px;
+}
+.mat-divider {
+    display: block;
+    margin: 0 !important;
+    width: 100%;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color:#3087ff;
+    }
+.button {
+    border-radius: 30px;
+    color:#001D28;
+    background-color: white;
+    margin-left: 1rem;
+    }
+.distanzaBottoni {
+    padding-left: 1rem;
+    padding-top: 15px;
+    }
+.bottoneMostra {
+    border-radius: 30px;
+    color:#3087ff;
+    background-color: white;
+    }
+.mostra {
+    display: flex;
+    justify-content: center;
+    }
