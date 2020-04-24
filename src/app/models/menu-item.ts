@@ -3,4 +3,5 @@ export interface MenuItem {
     descrizione: string;
     selezionato: boolean;
     url: string;
+    class: string;
 }
