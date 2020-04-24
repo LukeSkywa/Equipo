@@ -2,7 +2,7 @@
     <button class="button" (click)="cambiaLista('viaggi')" mat-flat-button [disabled]=listaVuota()>Tutti</button>
     <button class="button" (click)="cambiaLista('preferiti')" mat-flat-button [disabled]=listaPreferitiVuota()>Preferiti</button>
     <button class="button" (click)="cambiaLista('nascosti')" mat-flat-button [disabled]=listaNascostiVuota()>Nascosti</button>
-    <input type="text" name="search" [(ngModel)]="search" autocomplete="off" placeholder="Cerca">
+    <!-- <input type="text" name="search" [(ngModel)]="search" autocomplete="off" placeholder="Cerca"> -->
 </div>
 <div [ngSwitch]="listaToShow">
     <div *ngSwitchCase="'viaggi'">
