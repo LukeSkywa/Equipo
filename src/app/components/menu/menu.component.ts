@@ -28,6 +28,10 @@ export class MenuComponent implements OnInit {
 
   logout()
   {sessionStorage.removeItem("user");
-  this.router.navigateByUrl('/login');}
-
+  this.router.navigateByUrl('/login');
+  }
+  search(inputValue:string){
+    
+  }
+  
 }
