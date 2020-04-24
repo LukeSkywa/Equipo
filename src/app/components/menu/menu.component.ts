@@ -28,4 +28,9 @@ export class MenuComponent implements OnInit {
   {sessionStorage.removeItem("user");
   this.router.navigateByUrl('/login');}
 
+  // richiamo dall'html o al keyup.enter o al click su un pulsante, ricevendo in ingresso il valore dell'input
+  search(inputValue: string){
+    // next su un subject passando inputValue
+  }
+
 }

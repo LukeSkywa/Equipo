@@ -150,6 +150,20 @@ export class ListaViaggiService {
       prezzo: 250,
       preferito: false,
       nascosto: false
+    },
+    {
+      id: 11,
+      immagine: "Turchia.jpg",
+      localita: "Turchia",
+      soggiorno: "Una camera per due adulti",
+      durata: "3 notti",
+      sistemazione: "Camera doppia standard",
+      trattamento: "Pensione completa",
+      descrizione:"Un'esclusiva selezione di Tour Turchia 2020 e Viaggi in Turchia alla scoperta di questa terra di tradizioni, millenarie, punto di incontro tra Oriente ed Occidente. La Turchia è al centro della nostra storia fin dalle origini. I colorati bazar e l’eco dei minareti di Istanbul, il magico mondo della Cappadocia caratterizzato da paesaggi unici, storia e natura si fondono creando un luogo unico.",
+      voto: 9,
+      prezzo: 100,
+      preferito: false,
+      nascosto: false
     }
   ];
 
@@ -207,19 +221,19 @@ export class ListaViaggiService {
     return false;
   }
   
-  getViaggio(nomeVideoGioco:string){
+  getViaggio(nomeViaggio:string){
     for(let i=0;i<this.list.length;i++)
     {
-      if(this.list[i].localita===nomeVideoGioco)
+      if(this.list[i].localita===nomeViaggio)
       {
-        return JSON.parse(JSON.stringify(this.list[i]));;
+        return this.list[i];
       }
     }
     for(let i=0;i<this.viaggiNascosti.length;i++)
     {
-      if(this.viaggiNascosti[i].localita===nomeVideoGioco)
+      if(this.viaggiNascosti[i].localita===nomeViaggio)
       {
-        return JSON.parse(JSON.stringify(this.viaggiNascosti[i]));;
+        return this.viaggiNascosti[i];
       }
     }
   }
