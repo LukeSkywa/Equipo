@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuService } from 'src/app/services/menu.service';
 import { MenuItem } from 'src/app/models/menu-item';
 import { Router } from '@angular/router';
+import { SearchViaggioService } from 'src/app/services/search-viaggio.service';
 
 @Component({
   selector: 'app-menu',
@@ -13,9 +14,10 @@ export class MenuComponent implements OnInit {
   currentRoute:string=null;
 
   menuList: MenuItem[] = [];
-
-  constructor(private menuListService: MenuService, private router:Router) {
+  testo: string = '';
+  constructor(private menuListService: MenuService, private router:Router, private  myService: SearchViaggioService) {
     this.menuList = this.menuListService.getMenuList();
+    this.myService.messaggio$.subscribe(value=>{});
   }
 
   ngOnInit(): void {

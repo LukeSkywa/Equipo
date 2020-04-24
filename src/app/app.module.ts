@@ -29,7 +29,8 @@ import { ProfiloComponent } from './components/profilo/profilo.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
-
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,9 @@ import { ModificaProfiloComponent } from './components/modifica-profilo/modifica
     MatRadioModule,
     MatSelectModule,
     MatCarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

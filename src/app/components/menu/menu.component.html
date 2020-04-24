@@ -9,7 +9,11 @@
         <img src="../../../assets/immagini/logo.png" alt="">
         <mat-form-field class="cerca" appearance="fill" *ngIf="currentRoute=='/list'">
             <mat-icon class="lente" matPrefix>search</mat-icon>
-            <input class="ricerca" matInput type="search" placeholder="Cerca">
+            <div class="search-hero">
+                <input class="form-control" [value]='testo' type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by localita or descrizione">
+              </div>
+
+
         </mat-form-field>
     </ng-container>
 

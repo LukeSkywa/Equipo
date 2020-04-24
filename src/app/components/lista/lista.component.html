@@ -7,7 +7,7 @@
 </div>
 <div [ngSwitch]="listaToShow">
     <div *ngSwitchCase="'viaggi'">
-        <div class="wrapper sezione" *ngFor="let viaggio of viaggi | slice:inizio:mostra;">
+        <div class="wrapper sezione" *ngFor="let viaggio of viaggi | slice:inizio:mostra | filter:searchText">
             <div class="  imgViaggio">
                 <img src="../../../assets/immagini/{{viaggio.immagine}}">
             </div>
