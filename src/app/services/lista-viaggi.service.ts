@@ -221,19 +221,19 @@ export class ListaViaggiService {
     return false;
   }
   
-  getViaggio(nomeVideoGioco:string){
+  getViaggio(nomeViaggio:string){
     for(let i=0;i<this.list.length;i++)
     {
-      if(this.list[i].localita===nomeVideoGioco)
+      if(this.list[i].localita===nomeViaggio)
       {
-        return JSON.parse(JSON.stringify(this.list[i]));;
+        return this.list[i];
       }
     }
     for(let i=0;i<this.viaggiNascosti.length;i++)
     {
-      if(this.viaggiNascosti[i].localita===nomeVideoGioco)
+      if(this.viaggiNascosti[i].localita===nomeViaggio)
       {
-        return JSON.parse(JSON.stringify(this.viaggiNascosti[i]));;
+        return this.viaggiNascosti[i];
       }
     }
   }

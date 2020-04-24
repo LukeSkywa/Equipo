@@ -1,11 +1,13 @@
 <div class="distanzaBottoni">
     <button class="button" (click)="cambiaLista('viaggi')" mat-flat-button [disabled]=listaVuota()>Tutti</button>
-    <button class="button" (click)="cambiaLista('preferiti')" mat-flat-button [disabled]=listaPreferitiVuota()>Preferiti</button>
-    <button class="button" (click)="cambiaLista('nascosti')" mat-flat-button [disabled]=listaNascostiVuota()>Nascosti</button>
+    <button class="button" (click)="cambiaLista('preferiti')" mat-flat-button
+        [disabled]=listaPreferitiVuota()>Preferiti</button>
+    <button class="button" (click)="cambiaLista('nascosti')" mat-flat-button
+        [disabled]=listaNascostiVuota()>Nascosti</button>
 </div>
 <div [ngSwitch]="listaToShow">
     <div *ngSwitchCase="'viaggi'">
-        <div class="wrapper sezione" *ngFor="let viaggio of viaggi">
+        <div class="wrapper sezione" *ngFor="let viaggio of viaggi | slice:inizio:mostra;">
             <div class="  imgViaggio">
                 <img src="../../../assets/immagini/{{viaggio.immagine}}">
             </div>
@@ -34,13 +36,14 @@
                 </mat-menu>
             </div>
         </div>
-    </div>
-    <!-- <div class="posBottonePiu">
-            <button *ngIf="show < videogiochi.length" (click)="increaseShow()" class="bottoneDiPiu"
+        <div class="mostra">
+            <button *ngIf="mostra < viaggi.length" (click)="incrementaContatore()" class="bottoneMostra"
                 mat-flat-button>mostra di più</button>
-        </div>-->
+        </div>
+    </div>
+
     <div *ngSwitchCase="'preferiti'">
-        <div class="wrapper sezione" *ngFor="let viaggio of viaggiPreferiti">
+        <div class="wrapper sezione" *ngFor="let viaggio of viaggiPreferiti | slice:inizio:mostraPreferiti;">
             <div class="  imgViaggio">
                 <img src="../../../assets/immagini/{{viaggio.immagine}}">
             </div>
@@ -69,9 +72,14 @@
                 </mat-menu>
             </div>
         </div>
+        <div class="mostra">
+            <button *ngIf="mostraPreferiti < viaggiPreferiti.length" (click)="incrementaPreferiti()"
+                class="bottoneMostra" mat-flat-button>mostra di più</button>
+        </div>
     </div>
+
     <div *ngSwitchCase="'nascosti'">
-        <div class="wrapper sezione" *ngFor="let viaggio of viaggiNascosti">
+        <div class="wrapper sezione" *ngFor="let viaggio of viaggiNascosti | slice:inizio:mostraNascosti;">
             <div class="  imgViaggio">
                 <img src="../../../assets/immagini/{{viaggio.immagine}}">
             </div>
@@ -98,6 +106,10 @@
                     </button>
                 </mat-menu>
             </div>
+        </div>
+        <div class="mostra">
+            <button *ngIf="mostraNascosti < viaggiNascosti.length" (click)="incrementaNascosti()" class="bottoneMostra"
+                mat-flat-button>mostra di più</button>
         </div>
     </div>
 </div>

@@ -9,7 +9,12 @@ import { ListaViaggiService } from 'src/app/services/lista-viaggi.service';
 })
 export class ListaComponent implements OnInit {
   listaToShow: string = "viaggi";
-  
+
+  inizio: number = 0;
+  mostra: number = 5;
+  mostraNascosti: number = 5;
+  mostraPreferiti: number = 5;
+
   viaggi: Viaggio[];
   viaggiPreferiti: Viaggio[] = [];
   viaggiNascosti: Viaggio[] = [];
@@ -21,15 +26,15 @@ export class ListaComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-  /*increaseShow() {
-    this.show += 5;
+  incrementaContatore() {
+    this.mostra += 5;
   }
-  increaseShowNascosti() {
-    this.showNascosti += 5;
+  incrementaNascosti() {
+    this.mostraNascosti += 5;
   }
-  increaseShowPreferiti() {
-    this.showPreferiti += 5;
-  }*/
+  incrementaPreferiti() {
+    this.mostraPreferiti += 5;
+  }
 
   listaNascostiVuota() {
     return this.viaggiNascosti.length == 0;
@@ -94,21 +99,7 @@ export class ListaComponent implements OnInit {
       this.lista.addViaggioPreferito(viaggio);
     }
   }
-
-  addViaggio(viaggio: Viaggio) {
-    this.lista.addViaggio(viaggio);
-  }
-
-  removeViaggio(viaggio: Viaggio) {
-    this.lista.removeViaggio(viaggio);
-  }
-
-  /*salvaVideogioco(nomeVideoGioco: string) {
-    sessionStorage.setItem("videogioco", nomeVideoGioco);
-    console.log(this.listaService.getVideogioco(sessionStorage.getItem('videogioco')));
-*/
-  
-  }
+}
 
 
 
