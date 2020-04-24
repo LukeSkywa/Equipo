@@ -150,6 +150,20 @@ export class ListaViaggiService {
       prezzo: 250,
       preferito: false,
       nascosto: false
+    },
+    {
+      id: 11,
+      immagine: "Turchia.jpg",
+      localita: "Turchia",
+      soggiorno: "Una camera per due adulti",
+      durata: "3 notti",
+      sistemazione: "Camera doppia standard",
+      trattamento: "Pensione completa",
+      descrizione:"Un'esclusiva selezione di Tour Turchia 2020 e Viaggi in Turchia alla scoperta di questa terra di tradizioni, millenarie, punto di incontro tra Oriente ed Occidente. La Turchia è al centro della nostra storia fin dalle origini. I colorati bazar e l’eco dei minareti di Istanbul, il magico mondo della Cappadocia caratterizzato da paesaggi unici, storia e natura si fondono creando un luogo unico.",
+      voto: 9,
+      prezzo: 100,
+      preferito: false,
+      nascosto: false
     }
   ];
 
