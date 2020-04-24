@@ -29,6 +29,7 @@ import { ProfiloComponent } from './components/profilo/profilo.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ModificaProfiloComponent } from './components/modifica-profilo/modifica
     ProfiloComponent,
     RegistrazioneComponent,
     FooterComponent,
-    ModificaProfiloComponent
+    ModificaProfiloComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
