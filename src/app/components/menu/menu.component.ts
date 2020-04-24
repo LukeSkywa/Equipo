@@ -14,8 +14,7 @@ export class MenuComponent implements OnInit {
   currentRoute:string=null;
 
   menuList: MenuItem[] = [];
-  testo: string = '';
-  constructor(private menuListService: MenuService, private router:Router) {
+  constructor(private menuListService: MenuService, private router:Router, private  myService: SearchViaggioService) {
     this.menuList = this.menuListService.getMenuList();
   }
 
@@ -29,8 +28,9 @@ export class MenuComponent implements OnInit {
     sessionStorage.removeItem("user");
     this.router.navigateByUrl('/login');
   }
+  
   search(inputValue:string){
-    
+    this.myService.pubblicaNuovoMessaggio(inputValue);
   }
   
 }

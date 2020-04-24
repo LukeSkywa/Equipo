@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Viaggio } from 'src/app/models/viaggio';
 import { ListaViaggiService } from 'src/app/services/lista-viaggi.service';
 import { SearchViaggioService } from 'src/app/services/search-viaggio.service';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-lista',
@@ -25,7 +26,9 @@ export class ListaComponent implements OnInit {
     this.viaggi = this.lista.getListaViaggi();
     this.viaggiNascosti = this.lista.getViaggiNascosti();
     this.viaggiPreferiti = this.lista.getViaggiPreferiti();
-    this.myService.messaggio$.subscribe(value=>{});
+    this.myService.messaggio$.subscribe(value=>{
+      // filtro la lista in base al value che ricervo
+    });
   }
   ngOnInit(): void {
   }
