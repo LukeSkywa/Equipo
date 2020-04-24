@@ -23,6 +23,9 @@ export class ListaComponent implements OnInit {
     this.viaggi = this.lista.getListaViaggi();
     this.viaggiNascosti = this.lista.getViaggiNascosti();
     this.viaggiPreferiti = this.lista.getViaggiPreferiti();
+
+    // mi metto in subscribe sul subject, sul quale viene fatta la next dal menu
+    // dentro la subscribe, avrò il valore del campo di ricerca e potrò fare il mio filtro
   }
   ngOnInit(): void {
   }
