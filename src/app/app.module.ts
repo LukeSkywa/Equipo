@@ -35,8 +35,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DettaglioViaggioComponent } from './components/dettaglio-viaggio/dettaglio-viaggio.component';
 
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { DettaglioViaggioComponent } from './components/dettaglio-viaggio/dettaglio-viaggio.component';
 
 
 

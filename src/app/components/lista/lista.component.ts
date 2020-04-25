@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Viaggio } from 'src/app/models/viaggio';
 import { ListaViaggiService } from 'src/app/services/lista-viaggi.service';
-import { SearchViaggioService } from 'src/app/services/search-viaggio.service';
-import { MenuComponent } from '../menu/menu.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista',
@@ -10,40 +9,50 @@ import { MenuComponent } from '../menu/menu.component';
   styleUrls: ['./lista.component.scss']
 })
 export class ListaComponent implements OnInit {
+  currentRoute: string;
+
   listaToShow: string = "viaggi";
 
   inizio: number = 0;
   mostra: number = 5;
   mostraNascosti: number = 5;
   mostraPreferiti: number = 5;
-  search:string;
+
+  search: string;
+  inputValueInSession: string;
 
   viaggi: Viaggio[];
   viaggiPreferiti: Viaggio[] = [];
   viaggiNascosti: Viaggio[] = [];
   
-  constructor(private lista: ListaViaggiService, private  myService: SearchViaggioService) {
+  constructor(private lista: ListaViaggiService, private router: Router) {
     this.viaggi = this.lista.getListaViaggi();
     this.viaggiNascosti = this.lista.getViaggiNascosti();
     this.viaggiPreferiti = this.lista.getViaggiPreferiti();
 
-    this.myService.messaggio$.subscribe(value=>{
-      // filtro la lista in base al value che ricervo
+    this.router.events.subscribe(value => {
+      this.currentRoute=this.router.url.toString();
     });
-
-
-    // mi metto in subscribe sul subject, sul quale viene fatta la next dal menu
-    // dentro la subscribe, avrò il valore del campo di ricerca e potrò fare il mio filtro
-
   }
+
   ngOnInit(): void {
+    console.log(this.currentRoute);
+    this.search = this.currentRoute.slice(6,this.currentRoute.length);
+    if (this.search != null) {
+      sessionStorage.setItem('search', this.search);
+      this.inputValueInSession = sessionStorage.getItem('search');
+    }
+    console.log(this.search);
   }
+
   incrementaContatore() {
     this.mostra += 5;
   }
+
   incrementaNascosti() {
     this.mostraNascosti += 5;
   }
+
   incrementaPreferiti() {
     this.mostraPreferiti += 5;
   }
@@ -51,9 +60,11 @@ export class ListaComponent implements OnInit {
   listaNascostiVuota() {
     return this.viaggiNascosti.length == 0;
   }
+
   listaPreferitiVuota() {
     return this.viaggiPreferiti.length == 0;
   }
+
   listaVuota() {
     return this.viaggi.length == 0;
   }
@@ -110,10 +121,6 @@ export class ListaComponent implements OnInit {
     if (viaggio.preferito) {
       this.lista.addViaggioPreferito(viaggio);
     }
-  }
-
-  getViaggio(id: number) {
-    //sessionStorage.setItem("id", id);
   }
 }
 

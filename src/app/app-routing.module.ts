@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent ,canActivate:[CanactivateLoginGuard]},
   { path: 'home', component: HomepageComponent,canActivate:[LoginGuard] },
   { path: 'list', component: ListaComponent,canActivate:[LoginGuard] },
+  { path: 'list/:localita', component: ListaComponent,canActivate:[LoginGuard] },
   { path: 'dettaglio/:id', component: DettaglioViaggioComponent,canActivate:[LoginGuard] },
   { path: 'cards', component: CardsComponent,canActivate:[LoginGuard] },
   { path: 'feedback', component: FeedbackComponent,canActivate:[LoginGuard] },
