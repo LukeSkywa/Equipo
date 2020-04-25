@@ -12,8 +12,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
-import {MatIconModule} from '@angular/material/icon';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -29,8 +29,16 @@ import { ProfiloComponent } from './components/profilo/profilo.component';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
+
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { DettaglioViaggioComponent } from './components/dettaglio-viaggio/dettaglio-viaggio.component';
+
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { DettaglioViaggioComponent } from './components/dettaglio-viaggio/dettaglio-viaggio.component';
+
+
 
 @NgModule({
   declarations: [
@@ -44,7 +52,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     ProfiloComponent,
     RegistrazioneComponent,
     FooterComponent,
-    ModificaProfiloComponent
+    ModificaProfiloComponent,
+    PageNotFoundComponent,
+    DettaglioViaggioComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +74,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     MatCarouselModule,
     BrowserAnimationsModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-.topnav {
+/*.topnav {
     overflow: hidden;
     z-index: 1000;
 }
@@ -22,13 +22,13 @@
 .topnav div.active {
     border-bottom: solid white 1px;
     outline: none;
-}
+}*/
 
 img {
     width: 80px;
     height: 80px;
     overflow: hidden;
-    float: right;
+    //float: right;
     margin-top: 10px;
     margin-right: 20px;
 }
@@ -44,6 +44,7 @@ img {
 
 .cerca {
     width: 350px;
+
     float: right;
     padding: 20px 50px 0 0;
 }*/
@@ -64,4 +65,70 @@ img {
   }
   .form-control::placeholder  {
     font-family: FontAwesome;
-  }
+  
+
+    //float: right;
+    padding: 20px 0px 0 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.one {
+    grid-column: 1;
+    grid-row: 1;
+}
+.two {
+    grid-column: 2;
+    grid-row: 1;
+}
+.three {
+    grid-column: 3;
+    grid-row: 1;
+}
+.four {
+    grid-column: 4;
+    grid-row: 1;
+}
+.five {
+    grid-column: 5;
+    grid-row: 1;
+}
+.six {
+    grid-column: 6;
+    grid-row: 1;
+}
+.seven {
+    grid-column: 7;
+    grid-row: 1;
+}
+.eight {
+    grid-column: 8;
+    grid-row: 1;
+}
+
+.wrapper div {
+    //float: left;
+    color: #f2f2f2;
+    text-align: center;
+    //padding: 14px 40px;
+    text-decoration: none;
+    font-size: 17px;
+    //margin-top: 20px;
+    padding-top: 50px;
+}
+
+.wrapper div:hover {
+    border-bottom: solid white 1px;
+    cursor: pointer;
+    outline: none;
+}
+
+.wrapper div.active {
+    border-bottom: solid white 1px;
+    outline: none;
+}
+

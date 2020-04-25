@@ -13,7 +13,8 @@ export class ListaViaggiService {
   private list: Viaggio[] = [
     {
       id: 1,
-      immagine: "egitto.jpg",
+      immagine: "Egitto.jpg",
+      immagineVert: "Egitto.jpg",
       localita: "Egitto",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -28,6 +29,7 @@ export class ListaViaggiService {
     {
       id: 2,
       immagine: "Usa.jpg",
+      immagineVert: "Usa.jpg",
       localita: "USA",
       soggiorno: "Una camera per un adulti",
       durata: "2 notti",
@@ -42,6 +44,7 @@ export class ListaViaggiService {
     {
       id: 3,
       immagine: "Roma.jpg",
+      immagineVert: "Roma.jpg",
       localita: "Italia",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -56,6 +59,7 @@ export class ListaViaggiService {
     {
       id: 4,
       immagine: "Spagna.jpg",
+      immagineVert: "Spagna.jpg",
       localita: "Spagna",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -70,6 +74,7 @@ export class ListaViaggiService {
     {
       id: 5,
       immagine: "Portogallo.jpg",
+      immagineVert: "Portogallo.jpg",
       localita: "Portogallo",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -84,6 +89,7 @@ export class ListaViaggiService {
     {
       id: 6,
       immagine: "Brasile.jpg",
+      immagineVert: "Brasile.jpg",
       localita: "Brasile",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -98,6 +104,7 @@ export class ListaViaggiService {
     {
       id: 7,
       immagine: "Cina.jpg",
+      immagineVert: "Cina.jpg",
       localita: "Cina",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -112,6 +119,7 @@ export class ListaViaggiService {
     {
       id: 8,
       immagine: "Grecia.jpg",
+      immagineVert: "Grecia.jpg",
       localita: "Grecia",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -126,6 +134,7 @@ export class ListaViaggiService {
     {
       id: 9,
       immagine: "Albania.jpg",
+      immagineVert: "Albania.jpg",
       localita: "Albania",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -140,6 +149,7 @@ export class ListaViaggiService {
     {
       id: 10,
       immagine: "Senegal.jpg",
+      immagineVert: "Senegal.jpg",
       localita: "Senegal",
       soggiorno: "Una camera per due adulti",
       durata: "7 notti",
@@ -154,6 +164,7 @@ export class ListaViaggiService {
     {
       id: 11,
       immagine: "Turchia.jpg",
+      immagineVert: "Turchia.jpg",
       localita: "Turchia",
       soggiorno: "Una camera per due adulti",
       durata: "3 notti",
@@ -221,17 +232,17 @@ export class ListaViaggiService {
     return false;
   }
   
-  getViaggio(nomeViaggio:string){
+  getViaggio(idViaggio: number){
     for(let i=0;i<this.list.length;i++)
     {
-      if(this.list[i].localita===nomeViaggio)
+      if(this.list[i].id===idViaggio)
       {
         return this.list[i];
       }
     }
     for(let i=0;i<this.viaggiNascosti.length;i++)
     {
-      if(this.viaggiNascosti[i].localita===nomeViaggio)
+      if(this.viaggiNascosti[i].id===idViaggio)
       {
         return this.viaggiNascosti[i];
       }

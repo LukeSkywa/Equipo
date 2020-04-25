@@ -26,9 +26,15 @@ export class ListaComponent implements OnInit {
     this.viaggi = this.lista.getListaViaggi();
     this.viaggiNascosti = this.lista.getViaggiNascosti();
     this.viaggiPreferiti = this.lista.getViaggiPreferiti();
+
     this.myService.messaggio$.subscribe(value=>{
       // filtro la lista in base al value che ricervo
     });
+
+
+    // mi metto in subscribe sul subject, sul quale viene fatta la next dal menu
+    // dentro la subscribe, avrò il valore del campo di ricerca e potrò fare il mio filtro
+
   }
   ngOnInit(): void {
   }
@@ -104,6 +110,10 @@ export class ListaComponent implements OnInit {
     if (viaggio.preferito) {
       this.lista.addViaggioPreferito(viaggio);
     }
+  }
+
+  getViaggio(id: number) {
+    //sessionStorage.setItem("id", id);
   }
 }
 

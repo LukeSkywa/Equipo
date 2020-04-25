@@ -24,7 +24,7 @@
                     <mat-icon>more_vert</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu" class="bottoneMenu">
-                    <button mat-menu-item>
+                    <button mat-menu-item [routerLink]="['/dettaglio', viaggio.id]">
                         <mat-icon>link</mat-icon>Visualizza dettagli
                     </button>
 
@@ -59,7 +59,7 @@
                     <mat-icon>more_vert</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu" class="bottoneMenu">
-                    <button mat-menu-item>
+                    <button mat-menu-item [routerLink]="['/dettaglio', viaggio.id]">
                         <mat-icon>link</mat-icon>Visualizza dettagli
                     </button>
 
@@ -94,7 +94,7 @@
                     <mat-icon>more_vert</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu" class="bottoneMenu">
-                    <button mat-menu-item>
+                    <button mat-menu-item [routerLink]="['/dettaglio', viaggio.id]">
                         <mat-icon>link</mat-icon>Visualizza dettagli
                     </button>
                     <button mat-menu-item (click)="cambiaNascosto(viaggio)">
