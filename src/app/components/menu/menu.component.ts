@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MenuService } from 'src/app/services/menu.service';
 import { MenuItem } from 'src/app/models/menu-item';
 import { Router } from '@angular/router';
@@ -10,27 +10,35 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  currentRoute:string=null;
+  currentRoute: string = null;
+
+  searchInput: string;
+
+  inputValueInSession: string = sessionStorage.getItem('search');
 
   menuList: MenuItem[] = [];
-
-  constructor(private menuListService: MenuService, private router:Router) {
+  constructor(private menuListService: MenuService, private router: Router) {
     this.menuList = this.menuListService.getMenuList();
   }
 
   ngOnInit(): void {
     this.router.events.subscribe(value => {
-      this.currentRoute=this.router.url.toString();
+      this.currentRoute = this.router.url.toString();
     });
+
+    if (this.currentRoute=='/list') {
+      sessionStorage.removeItem('search');
+    }
+    console.log(this.inputValueInSession);
   }
 
-  logout()
-  {sessionStorage.removeItem("user");
-  this.router.navigateByUrl('/login');}
+  logout() {
+    sessionStorage.removeItem("user");
+    this.router.navigateByUrl('/login');
+  }
 
-  // richiamo dall'html o al keyup.enter o al click su un pulsante, ricevendo in ingresso il valore dell'input
-  search(inputValue: string){
-    // next su un subject passando inputValue
+  inputEvent(ev) {
+    this.searchInput = ev.target.value;
   }
 
 }

@@ -30,6 +30,13 @@ import { RegistrazioneComponent } from './components/registrazione/registrazione
 import { FooterComponent } from './components/footer/footer.component';
 import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
 
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { DettaglioViaggioComponent } from './components/dettaglio-viaggio/dettaglio-viaggio.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -43,7 +50,9 @@ import { ModificaProfiloComponent } from './components/modifica-profilo/modifica
     ProfiloComponent,
     RegistrazioneComponent,
     FooterComponent,
-    ModificaProfiloComponent
+    ModificaProfiloComponent,
+    PageNotFoundComponent,
+    DettaglioViaggioComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +70,9 @@ import { ModificaProfiloComponent } from './components/modifica-profilo/modifica
     MatRadioModule,
     MatSelectModule,
     MatCarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,17 +1,22 @@
 <div class="distanzaBottoni">
     <button class="button" (click)="cambiaLista('viaggi')" mat-flat-button [disabled]=listaVuota()>Tutti</button>
-    <button class="button" (click)="cambiaLista('preferiti')" mat-flat-button [disabled]=listaPreferitiVuota()>Preferiti</button>
-    <button class="button" (click)="cambiaLista('nascosti')" mat-flat-button [disabled]=listaNascostiVuota()>Nascosti</button>
+    <button class="button" (click)="cambiaLista('preferiti')" mat-flat-button
+        [disabled]=listaPreferitiVuota()>Preferiti</button>
+    <button class="button" (click)="cambiaLista('nascosti')" mat-flat-button
+        [disabled]=listaNascostiVuota()>Nascosti</button>
+</div>
+<div>
+
 </div>
 <div [ngSwitch]="listaToShow">
     <div *ngSwitchCase="'viaggi'">
-        <div class="wrapper sezione" *ngFor="let viaggio of viaggi | slice:inizio:mostra;">
+        <div class="wrapper sezione" *ngFor="let viaggio of viaggi | filter: search | slice:inizio:mostra">
             <div class="  imgViaggio">
                 <img src="../../../assets/immagini/{{viaggio.immagine}}">
             </div>
             <div class="info">
                 <span class="localita">{{viaggio.localita}}</span>
-                <span class="descrizione">{{viaggio.descrizione}}</span>
+                <span class="descrizione">{{viaggio.descrizione | slice:inizio:300 }}...</span>
             </div>
             <div class="icone">
                 <button class="preferito" mat-icon-button matSuffix (click)="cambiaPreferito(viaggio)">
@@ -34,19 +39,21 @@
                 </mat-menu>
             </div>
         </div>
-        <div class="mostra">
-            <button *ngIf="mostra < viaggi.length" (click)="incrementaContatore()" class="bottoneMostra" mat-flat-button>mostra di più</button>
+        <div class="mostra" *ngIf="inputValueInSession == '' ">
+            <button *ngIf="mostra < viaggi.length" (click)="incrementaContatore()" class="bottoneMostra"
+                mat-flat-button>mostra di più</button>
         </div>
     </div>
 
     <div *ngSwitchCase="'preferiti'">
-        <div class="wrapper sezione" *ngFor="let viaggio of viaggiPreferiti | slice:inizio:mostraPreferiti;">
+        <div class="wrapper sezione"
+            *ngFor="let viaggio of viaggiPreferiti | filter: search | slice:inizio:mostraPreferiti">
             <div class="  imgViaggio">
                 <img src="../../../assets/immagini/{{viaggio.immagine}}">
             </div>
             <div class="info">
                 <span class="localita">{{viaggio.localita}}</span>
-                <span class="descrizione">{{viaggio.descrizione}}</span>
+                <span class="descrizione">{{viaggio.descrizione | slice:inizio:300 }}...</span>
             </div>
             <div class="icone">
                 <button class="preferito" mat-icon-button matSuffix (click)="cambiaPreferito(viaggio)">
@@ -59,7 +66,7 @@
                     <mat-icon>more_vert</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu" class="bottoneMenu">
-                    <button mat-menu-item>
+                    <button mat-menu-item [routerLink]="['/dettaglio', viaggio.id]">
                         <mat-icon>link</mat-icon>Visualizza dettagli
                     </button>
 
@@ -69,19 +76,21 @@
                 </mat-menu>
             </div>
         </div>
-        <div class="mostra">
-            <button *ngIf="mostraPreferiti < viaggiPreferiti.length" (click)="incrementaPreferiti()" class="bottoneMostra" mat-flat-button>mostra di più</button>
+        <div class="mostra" *ngIf="inputValueInSession == '' ">
+            <button *ngIf="mostraPreferiti < viaggiPreferiti.length" (click)="incrementaPreferiti()"
+                class="bottoneMostra" mat-flat-button>mostra di più</button>
         </div>
     </div>
 
     <div *ngSwitchCase="'nascosti'">
-        <div class="wrapper sezione" *ngFor="let viaggio of viaggiNascosti | slice:inizio:mostraNascosti;">
+        <div class="wrapper sezione"
+            *ngFor="let viaggio of viaggiNascosti | filter: search | slice:inizio:mostraNascosti">
             <div class="  imgViaggio">
                 <img src="../../../assets/immagini/{{viaggio.immagine}}">
             </div>
             <div class="info">
                 <span class="localita">{{viaggio.localita}}</span>
-                <span class="descrizione">{{viaggio.descrizione}}</span>
+                <span class="descrizione">{{viaggio.descrizione | slice:inizio:300 }}...</span>
             </div>
             <div class="icone">
                 <button class="preferito" mat-icon-button matSuffix (click)="cambiaPreferito(viaggio)">
@@ -94,7 +103,7 @@
                     <mat-icon>more_vert</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu" class="bottoneMenu">
-                    <button mat-menu-item>
+                    <button mat-menu-item [routerLink]="['/dettaglio', viaggio.id]">
                         <mat-icon>link</mat-icon>Visualizza dettagli
                     </button>
                     <button mat-menu-item (click)="cambiaNascosto(viaggio)">
@@ -103,8 +112,13 @@
                 </mat-menu>
             </div>
         </div>
-        <div class="mostra">
-            <button *ngIf="mostraNascosti < viaggiNascosti.length" (click)="incrementaNascosti()" class="bottoneMostra" mat-flat-button>mostra di più</button>
+        <div class="mostra" *ngIf="inputValueInSession == '' ">
+            <button *ngIf="mostraNascosti < viaggiNascosti.length" (click)="incrementaNascosti()" class="bottoneMostra"
+                mat-flat-button>mostra di più</button>
         </div>
     </div>
+
+</div>
+<div class="mostra" *ngIf="inputValueInSession != '' ">
+    <button class="bottoneMostra" mat-flat-button [routerLink]="['/list']">Torna alla lista</button>
 </div>

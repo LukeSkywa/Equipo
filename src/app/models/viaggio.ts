@@ -2,6 +2,7 @@ export interface Viaggio {
     
     id: number;
     immagine: string;
+    immagineVert: string;
     localita: string;
     soggiorno: string;
     durata: string;
