@@ -1,0 +1,63 @@
+<section class="wrapper">
+    <div class="one">
+        <div class="localita">{{viaggio.localita}}</div>
+        <div class="descrizione">{{viaggio.descrizione}}</div>
+        <div class="slide">
+            <mat-carousel class="height" color=secondary [hideIndicators]="false" maxWidth="auto" proportion="35"
+                timings="250ms ease-in" [autoplay]="true" interval="2500" [loop]="true" [hideArrows]="true"
+                [hideIndicators]="false" [useKeyboard]="false" [useMouseWheel]="false">
+                <mat-carousel-slide [hideOverlay]="false">
+                    <mat-icon class="icon">group</mat-icon>
+                    <a class="testoSlide">{{viaggio.soggiorno}}</a>
+                </mat-carousel-slide>
+                <mat-carousel-slide [hideOverlay]="false">
+                    <mat-icon class="icon">timer</mat-icon>
+                    <a class="testoSlide">{{viaggio.durata}}</a>
+                </mat-carousel-slide>
+                <mat-carousel-slide [hideOverlay]="false">
+                    <mat-icon class="icon">king_bed</mat-icon>
+                    <a class="testoSlide">{{viaggio.sistemazione}}</a>
+                </mat-carousel-slide>
+                <mat-carousel-slide [hideOverlay]="false">
+                    <mat-icon class="icon">fastfood</mat-icon>
+                    <a class="testoSlide">{{viaggio.trattamento}}</a>
+                </mat-carousel-slide>
+            </mat-carousel>
+        </div>
+    </div>
+
+    <div class="two" ><img src="../../../assets/immaginiVert/{{viaggio.immagineVert}}"></div>
+
+    <div class="three">
+        <div class="radio">
+            <div class="bottoni">
+                <mat-radio-group>
+                    <mat-radio-button color=accent value="1"></mat-radio-button>
+                    <mat-radio-button color=primary value="2"></mat-radio-button>
+                    <mat-radio-button color=warn value="3"></mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="prezzo">
+                <span>€ {{viaggio.prezzo}}</span>
+            </div>
+        </div>
+
+        <div class="slide2">
+            <mat-carousel class="testo" color=secondary [hideIndicators]="false" maxWidth="auto" proportion="50"
+                [autoplay]="false">
+                <mat-carousel-slide [hideOverlay]="true">
+                    <p> Soggiorno : {{viaggio.soggiorno}}</p>
+                </mat-carousel-slide>
+                <mat-carousel-slide [hideOverlay]="true">
+                    <p>Durata : {{viaggio.durata}}</p>
+                </mat-carousel-slide>
+                <mat-carousel-slide [hideOverlay]="true">
+                    <p>Sistemazione : {{viaggio.sistemazione}}</p>
+                </mat-carousel-slide>
+                <mat-carousel-slide [hideOverlay]="true">
+                    <p>Trattamento : {{viaggio.trattamento}}</p>
+                </mat-carousel-slide>
+            </mat-carousel>
+        </div>
+    </div>
+</section>

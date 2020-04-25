@@ -102,6 +102,10 @@ export class ListaComponent implements OnInit {
       this.lista.addViaggioPreferito(viaggio);
     }
   }
+
+  getViaggio(id: number) {
+    //sessionStorage.setItem("id", id);
+  }
 }
 
 
