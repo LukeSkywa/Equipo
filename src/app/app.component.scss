@@ -9,7 +9,7 @@
 
 .body {
     display: grid;
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: 100px 1fr 65px;
     height: 100vh;
 }
 
@@ -21,10 +21,10 @@
     width: 20px;
   }
   
-  ::-webkit-scrollbar-thumb {
-    background: #052431; 
-    border-radius: 10px;
+::-webkit-scrollbar-thumb {
+  background: #052431; 
+  border-radius: 10px;
   }
-  ::-webkit-scrollbar-thumb:hover {
-    background: black; 
+::-webkit-scrollbar-thumb:hover {
+  background: black; 
   }
