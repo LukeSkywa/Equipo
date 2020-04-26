@@ -25,7 +25,7 @@ export class FeedbackComponent implements OnInit {
   }
 
   getFeedback(){
-    
+    console.log(this.feedbackForm.value);
   }
 
 }
