@@ -4,7 +4,7 @@
         <div class="descrizione">{{viaggio.descrizione}}</div>
         <div class="slide">
             <mat-carousel class="height" color=secondary [hideIndicators]="false" maxWidth="auto" proportion="35"
-                timings="250ms ease-in" [autoplay]="true" interval="2500" [loop]="true" [hideArrows]="true"
+                timings="1s ease-in" [autoplay]="true" interval="5000" [loop]="true" [hideArrows]="true"
                 [hideIndicators]="false" [useKeyboard]="false" [useMouseWheel]="false">
                 <mat-carousel-slide [hideOverlay]="false">
                     <mat-icon class="icon">group</mat-icon>
@@ -44,7 +44,7 @@
 
         <div class="slide2">
             <mat-carousel class="testo" color=secondary [hideIndicators]="false" maxWidth="auto" proportion="50"
-                [autoplay]="false">
+                [autoplay]="false" interval="5000" timings="1s ease-in">
                 <mat-carousel-slide [hideOverlay]="true">
                     <p> Soggiorno : {{viaggio.soggiorno}}</p>
                 </mat-carousel-slide>
