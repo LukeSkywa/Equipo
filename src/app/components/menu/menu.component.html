@@ -1,5 +1,5 @@
 <div *ngIf="currentRoute!='/login' && currentRoute!='/registrazione'" class="wrapper">
-    
+
     <ng-container>
         <ng-container *ngFor="let item of menuList">
             <div routerLink="{{ item.url }}" routerLinkActive="active" class="{{ item.class }}">
@@ -8,10 +8,12 @@
         </ng-container>
         <div (click)="logout()" class="six">Esci</div>
         <img src="../../../assets/immagini/logo.png" alt="" class="eight">
-        <mat-form-field class="cerca seven" appearance="fill" *ngIf="currentRoute=='/list' || inputValueInSession !='' ">
-            <mat-icon class="lente" matPrefix [routerLink]="['/list', searchInput]">search</mat-icon>
-            <input class="ricerca" matInput type="search" placeholder="Cerca" (input)="inputEvent($event)">
-        </mat-form-field>
+        <ng-container *ngIf="currentRoute=='/list'">
+            <mat-form-field class="cerca seven" appearance="fill" *ngIf="currentRoute=='/list' || inputValueInSession !='' ">
+                <mat-icon class="lente" matPrefix [routerLink]="['/list', searchInput]">search</mat-icon>
+                <input class="ricerca" matInput type="search" placeholder="Cerca" (input)="inputEvent($event)">
+            </mat-form-field>
+        </ng-container>
     </ng-container>
 
 </div>
