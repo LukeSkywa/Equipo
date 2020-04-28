@@ -8,23 +8,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FeedbackComponent implements OnInit {
 
-  feedbackForm:FormGroup;
+  feedbackForm: FormGroup;
 
-  constructor(private fb:FormBuilder) { 
-    this.feedbackForm=this.fb.group({
+  constructor(private fb: FormBuilder) {
+    this.feedbackForm = this.fb.group({
       nome: ['', Validators.required],
       cognome: ['', Validators.required],
       sesso: ['', Validators.required],
-      email: ['',Validators.compose([Validators.required, Validators.email])],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
       telefono: ['', Validators.required],
-      commento: ['',Validators.compose([Validators.required, Validators.minLength(20), Validators.maxLength(150)])]
+      commento: ['', Validators.compose([Validators.required, Validators.minLength(20), Validators.maxLength(150)])]
     });
   }
 
   ngOnInit(): void {
   }
 
-  getFeedback(){
+  getFeedback() {
     console.log(this.feedbackForm.value);
   }
 

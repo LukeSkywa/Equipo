@@ -5,7 +5,7 @@ import { SlideHome } from '../models/slide-home';
   providedIn: 'root'
 })
 export class SlideHomeService {
-  
+
 
   private slideList: SlideHome[] = [
     { id: 1, descrizione: 'Hai visto che bel paesaggio?...con la nostra agenzia potrai iniziare a viaggiare già con la mente osservando i fantastici luoghi che offriamo, guarda anche tu la lista viaggi e scegli i tuoi preferiti e noi...ti aiuteremo a farli davvero! Quelli che non ti piacciono li puoi nasconere e se ci ripensi sei sempre in tempo a cambiare idea.', urlImg: '../../../assets/immagini/sfondo1.jpg' },

@@ -4,12 +4,12 @@
             <div class="logo">
 
                 <img src="../../../assets/immagini/logo.png" alt="">
-                <!-- qui il logo -->
+
             </div>
             <div class="posBottone">
                 <button class="bottoneRegistrati" mat-fab matSuffix routerLink="/registrazione">
-                <mat-icon class="icon">add</mat-icon>
-            </button>
+                    <mat-icon class="icon">add</mat-icon>
+                </button>
             </div>
             <h3 class="scrittaLogin">Login</h3>
 
@@ -23,9 +23,10 @@
                 <mat-label class="coloreInput">Password</mat-label>
                 <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" placeholder="Password">
                 <mat-icon matPrefix class="iconPerson">lock</mat-icon>
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    
+
                 </button>
             </mat-form-field>
 

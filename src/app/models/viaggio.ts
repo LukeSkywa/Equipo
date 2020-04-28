@@ -1,5 +1,4 @@
 export interface Viaggio {
-    
     id: number;
     immagine: string;
     immagineVert: string;
@@ -13,5 +12,4 @@ export interface Viaggio {
     prezzo: number;
     preferito: boolean;
     nascosto: boolean;
-
 }

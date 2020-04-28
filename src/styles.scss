@@ -43,10 +43,9 @@ $Equipo-theme: mat-light-theme($Equipo-primary, $Equipo-accent, $Equipo-warn);
 
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
+html, body {
     height: 100%;
-}
+    }
 
 body {
     margin: 0;
@@ -55,4 +54,4 @@ body {
     font-weight: bold;
     height: 100%;
     margin: 0;
-}
+    }

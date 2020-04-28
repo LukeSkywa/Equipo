@@ -11,12 +11,12 @@ import { ProfiloService } from 'src/app/services/profilo.service';
 })
 export class RegistrazioneComponent implements OnInit {
 
-  hide:boolean = true;
-  registraForm : FormGroup;
-  utente:Utente;
+  hide: boolean = true;
+  registraForm: FormGroup;
+  utente: Utente;
 
-  constructor( private fb: FormBuilder, private router: Router, private registraService: ProfiloService) { 
-    this.registraForm=this.fb.group({
+  constructor(private fb: FormBuilder, private router: Router, private registraService: ProfiloService) {
+    this.registraForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
     });
@@ -25,9 +25,9 @@ export class RegistrazioneComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registrazione(){
-    this.utente=this.registraForm.value;
-    if(this.registraService.registraUtente(this.utente)){
+  registrazione() {
+    this.utente = this.registraForm.value;
+    if (this.registraService.registraUtente(this.utente)) {
       this.router.navigateByUrl("/login");
     }
 

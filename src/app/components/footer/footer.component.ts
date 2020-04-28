@@ -8,13 +8,13 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent implements OnInit {
 
-  currentRoute:string=null;
+  currentRoute: string = null;
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.router.events.subscribe(value => {
-      this.currentRoute=this.router.url.toString();
+      this.currentRoute = this.router.url.toString();
     });
   }
 

@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
       this.currentRoute = this.router.url.toString();
     });
 
-    if (this.currentRoute=='/list') {
+    if (this.currentRoute == '/list') {
       sessionStorage.removeItem('search');
     }
     console.log(this.inputValueInSession);

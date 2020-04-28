@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 400px 1fr;
     grid-template-rows: 50px 460px 1fr;
-}
+    }
 
 .form {
     grid-row-start: 2;
@@ -18,17 +18,17 @@
     -webkit-box-shadow: -10px -10px 0px 0px #43779F;
     -moz-box-shadow: -10px -10px 0px 0px #43779F;
     box-shadow: -10px -10px 0px 0px #43779F;
-}
+    }
 
 .registraForm {
     width: 300px;
-}
+    }
 
 .logo {
     margin-top: 15px;
     display: flex;
     justify-content: center;
-}
+    }
 
 .scrittaRegistra {
     margin-top: -35px;
@@ -36,7 +36,7 @@
     justify-content: center;
     font: inherit;
     font-size: 25px;
-}
+    }
 
 img {
     width: 120px;
@@ -45,20 +45,20 @@ img {
     float: right;
     margin-top: 10px;
     margin-right: 20px;
-}
+    }
 
 .boxInput {
     width: 100%;
-}
+    }
 
 .coloreInput {
     color: white;
-}
+    }
 
 .iconPerson {
     margin-right: 20px;
     font-size: 30px;
-}
+    }
 
 .bottoneRegistra {
     margin-top: 20px;
@@ -71,22 +71,22 @@ img {
     font-size: 15px;
     color: #43779F;
     outline: none;
-}
+    }
 
 .tornaALogin {
     background-color: #052431;
     color: white;
-}
+    }
 
 .icon {
     transform: scale(1.5);
-}
+    }
 
 .posBottone {
     padding-left: 298px;
     transform: translateY(-50%);
-}
+    }
 
 .prova {
     margin-left: 15px;
-}
+    }

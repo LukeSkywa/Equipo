@@ -10,17 +10,17 @@ import { ProfiloService } from 'src/app/services/profilo.service';
 })
 export class ProfiloComponent implements OnInit {
 
-  utente:Utente;
+  utente: Utente;
 
-  constructor(private router: Router, private listaRegistrati:ProfiloService) {
+  constructor(private router: Router, private listaRegistrati: ProfiloService) {
 
-   }
-
-  ngOnInit(): void {
-    this.utente=this.listaRegistrati.getUtente(sessionStorage.getItem('user'));
   }
 
-  faiModifica(){
+  ngOnInit(): void {
+    this.utente = this.listaRegistrati.getUtente(sessionStorage.getItem('user'));
+  }
+
+  faiModifica() {
     this.router.navigateByUrl("/modifica-profilo");
   }
 

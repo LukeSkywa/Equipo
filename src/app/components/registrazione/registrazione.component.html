@@ -22,15 +22,17 @@
                 <mat-label class="coloreInput">Password</mat-label>
                 <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" placeholder="Password">
                 <mat-icon matPrefix class="iconPerson">lock</mat-icon>
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    
+
                 </button>
             </mat-form-field>
 
             <div>
 
-                <input type="submit" class="bottoneRegistra" [disabled]="registraForm.status === 'INVALID'" value="Registati">
+                <input type="submit" class="bottoneRegistra" [disabled]="registraForm.status === 'INVALID'"
+                    value="Registati">
             </div>
 
         </form>

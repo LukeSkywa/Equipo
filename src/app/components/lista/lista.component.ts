@@ -24,20 +24,20 @@ export class ListaComponent implements OnInit {
   viaggi: Viaggio[];
   viaggiPreferiti: Viaggio[] = [];
   viaggiNascosti: Viaggio[] = [];
-  
+
   constructor(private lista: ListaViaggiService, private router: Router) {
     this.viaggi = this.lista.getListaViaggi();
     this.viaggiNascosti = this.lista.getViaggiNascosti();
     this.viaggiPreferiti = this.lista.getViaggiPreferiti();
 
     this.router.events.subscribe(value => {
-      this.currentRoute=this.router.url.toString();
+      this.currentRoute = this.router.url.toString();
     });
   }
 
   ngOnInit(): void {
     console.log(this.currentRoute);
-    this.search = this.currentRoute.slice(6,this.currentRoute.length);
+    this.search = this.currentRoute.slice(6, this.currentRoute.length);
     if (this.search != null) {
       sessionStorage.setItem('search', this.search);
       this.inputValueInSession = sessionStorage.getItem('search');
@@ -68,7 +68,7 @@ export class ListaComponent implements OnInit {
   listaVuota() {
     return this.viaggi.length == 0;
   }
-  
+
   cambiaLista(lista: string) {
     this.listaToShow = lista;
   }
@@ -123,9 +123,3 @@ export class ListaComponent implements OnInit {
     }
   }
 }
-
-
-
-
-
-

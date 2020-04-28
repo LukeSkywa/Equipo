@@ -10,20 +10,20 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm:FormGroup;
+  loginForm: FormGroup;
 
-  hide: boolean=true;
+  hide: boolean = true;
 
-  get emailControl(): FormControl{
+  get emailControl(): FormControl {
     return this.loginForm.get('email') as FormControl;
   }
-  
-  get passwordControl(): FormControl{
+
+  get passwordControl(): FormControl {
     return this.loginForm.get('password') as FormControl;
   }
 
-  constructor(private fb:FormBuilder, private profiloService:ProfiloService, private router:Router) { 
-    this.loginForm=this.fb.group({
+  constructor(private fb: FormBuilder, private profiloService: ProfiloService, private router: Router) {
+    this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
     });
@@ -32,8 +32,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
- login() {
-    this.profiloService.eseguiLogin(this.emailControl.value,this.passwordControl.value);
+  login() {
+    this.profiloService.eseguiLogin(this.emailControl.value, this.passwordControl.value);
   }
 
 }

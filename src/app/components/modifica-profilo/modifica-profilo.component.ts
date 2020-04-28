@@ -12,30 +12,30 @@ import { ProfiloService } from 'src/app/services/profilo.service';
 export class ModificaProfiloComponent implements OnInit {
 
   profiloForm: FormGroup;
-  utente:Utente;
+  utente: Utente;
 
-  constructor(private router: Router, private fb:FormBuilder, private listaRegistrati: ProfiloService) { 
-    this.profiloForm=this.fb.group({
+  constructor(private router: Router, private fb: FormBuilder, private listaRegistrati: ProfiloService) {
+    this.profiloForm = this.fb.group({
       nome: ['', Validators.required],
       cognome: ['', Validators.required],
       sesso: ['', Validators.required],
-      email: ['',Validators.compose([Validators.required, Validators.email])],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
       telefono: ['', Validators.required]
     });
   }
 
   ngOnInit(): void {
-    this.utente=this.listaRegistrati.getUtente(sessionStorage.getItem('user'));
+    this.utente = this.listaRegistrati.getUtente(sessionStorage.getItem('user'));
     this.profiloForm.reset(this.utente);
   }
 
-  annulla(){
+  annulla() {
     this.router.navigateByUrl("/profilo");
   }
 
-  modifica(){
-    let profiloModificato:Utente;
-    profiloModificato=this.profiloForm.value
+  modifica() {
+    let profiloModificato: Utente;
+    profiloModificato = this.profiloForm.value
     this.listaRegistrati.modificaUtente(profiloModificato);
     this.router.navigateByUrl("/profilo");
   }

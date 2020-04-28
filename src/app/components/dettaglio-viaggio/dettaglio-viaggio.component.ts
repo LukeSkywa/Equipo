@@ -13,7 +13,7 @@ export class DettaglioViaggioComponent implements OnInit {
   viaggio: Viaggio;
   constructor(private listaViaggi: ListaViaggiService, private route: ActivatedRoute) {
   }
-  
+
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       if (params.get("id")) {

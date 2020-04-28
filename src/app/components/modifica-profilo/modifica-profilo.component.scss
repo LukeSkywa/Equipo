@@ -60,7 +60,7 @@
 .divBottoni {
     display: grid;
     grid-template-columns: 1fr 300px 300px 1fr;
-}
+    }
 
 .annulla {
     background-color: white;
@@ -74,7 +74,7 @@
     grid-column: 2;
     display: flex;
     justify-content: center;
-}
+    }
 
 .conferma {
     background-color: white;
@@ -88,11 +88,11 @@
     grid-column: 3;
     display: flex;
     justify-content: center;
-}
+    }
 
 .inputColore {
     color: white;
-}
+    }
 
 .foto {
     background-color: white;
@@ -101,14 +101,14 @@
     justify-content: center;
     margin-left: 280px;
     margin-top: 120px;
-}
+    }
 
 .coloreIcon {
     color: #031f38;
-}
+    }
 .coloreSelect {
     color: #031f38;
-}
+    }
 mat-option{
     background-color:#0e658a;
-}
+    }
