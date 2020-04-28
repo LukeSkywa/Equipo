@@ -214,34 +214,14 @@ export class ListaViaggiService {
     this.viaggiPreferiti.push(viaggio);
   }
 
-  getViaggioPreferito(nome: string) {
-    this.viaggiPreferiti.forEach(element => {
-      if (element.localita === nome) {
-        return element;
-      }
-    });
-    return false;
-  }
-
-  getViaggioNascosto(nome: string) {
-    this.viaggiNascosti.forEach(element => {
-      if (element.localita === nome) {
-        return element;
-      }
-    });
-    return false;
-  }
-
   getViaggio(idViaggio: number) {
-    for (let i = 0; i < this.list.length; i++) {
-      if (this.list[i].id === idViaggio) {
-        return this.list[i];
-      }
+    for (let viaggio of this.list) {
+      if (viaggio.id === idViaggio)
+        return viaggio;
     }
-    for (let i = 0; i < this.viaggiNascosti.length; i++) {
-      if (this.viaggiNascosti[i].id === idViaggio) {
-        return this.viaggiNascosti[i];
-      }
+    for (let viaggio of this.viaggiNascosti) {
+      if (viaggio.id === idViaggio)
+        return viaggio;
     }
   }
 }
