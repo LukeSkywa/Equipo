@@ -15,7 +15,7 @@ import { DettaglioViaggioComponent } from './components/dettaglio-viaggio/dettag
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent ,canActivate:[CanactivateLoginGuard]},
-  { path: 'home', component: HomepageComponent,canActivate:[LoginGuard] },
+  { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule), canLoad:[LoginGuard] },
   { path: 'list', component: ListaComponent,canActivate:[LoginGuard] },
   { path: 'list/:localita', component: ListaComponent,canActivate:[LoginGuard] },
   { path: 'dettaglio/:id', component: DettaglioViaggioComponent,canActivate:[LoginGuard] },
@@ -24,7 +24,6 @@ const routes: Routes = [
   { path: 'modifica-profilo', component: ModificaProfiloComponent,canActivate:[LoginGuard] },
   { path: 'registrazione', component: RegistrazioneComponent, canActivate:[CanactivateLoginGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
   { path: '**', component: PageNotFoundComponent },
 ]
 

@@ -72,7 +72,7 @@ import { DettaglioViaggioComponent } from './components/dettaglio-viaggio/dettag
     MatCarouselModule,
     BrowserAnimationsModule,
     FormsModule,
-    Ng2SearchPipeModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
