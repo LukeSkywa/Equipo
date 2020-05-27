@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'modifica-profilo', component: ModificaProfiloComponent,canActivate:[LoginGuard] },
   { path: 'registrazione', component: RegistrazioneComponent, canActivate:[CanactivateLoginGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
   { path: '**', component: PageNotFoundComponent },
 ]
 
