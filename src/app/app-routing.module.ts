@@ -8,7 +8,6 @@ import { LoginGuard } from './guards/login.guard';
 import { CanactivateLoginGuard } from './guards/canactivate-login.guard';
 import { RegistrazioneComponent } from './components/registrazione/registrazione.component';
 import { ModificaProfiloComponent } from './components/modifica-profilo/modifica-profilo.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DettaglioViaggioComponent } from './components/dettaglio-viaggio/dettaglio-viaggio.component';
 
 
@@ -23,7 +22,6 @@ const routes: Routes = [
   { path: 'modifica-profilo', component: ModificaProfiloComponent,canActivate:[LoginGuard] },
   { path: 'registrazione', component: RegistrazioneComponent, canActivate:[CanactivateLoginGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent },
 ]
 
 @NgModule({
