@@ -1,0 +1,41 @@
+<section class="loginContainer">
+    <div class="form">
+        <form [formGroup]="loginForm" (ngSubmit)="login()" class="loginForm">
+            <div class="logo">
+
+                <img src="../../../assets/immagini/logo.png" alt="">
+
+            </div>
+            <div class="posBottone">
+                <button class="bottoneRegistrati" mat-fab matSuffix routerLink="/registrazione">
+                    <mat-icon class="icon">add</mat-icon>
+                </button>
+            </div>
+            <h3 class="scrittaLogin">Login</h3>
+
+            <mat-form-field class="boxInput" appearance="fill">
+                <mat-label class="coloreInput">Nome utente</mat-label>
+                <input matInput formControlName="email" type="text" placeholder="Nome utente">
+                <mat-icon matPrefix class="iconPerson">person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="boxInput" appearance="fill">
+                <mat-label class="coloreInput">Password</mat-label>
+                <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" placeholder="Password">
+                <mat-icon matPrefix class="iconPerson">lock</mat-icon>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+                </button>
+            </mat-form-field>
+
+            <mat-slide-toggle class="prova">Memorizza password</mat-slide-toggle>
+
+            <div>
+
+                <input type="submit" class="bottoneLogin" [disabled]="loginForm.status === 'INVALID'" value="Login">
+            </div>
+
+        </form>
+    </div>
+</section>
