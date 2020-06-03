@@ -14,16 +14,18 @@ import { DettaglioViaggioComponent } from './components/dettaglio-viaggio/dettag
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent ,canActivate:[CanactivateLoginGuard]},
-  { path: 'home', component: HomepageComponent,canActivate:[LoginGuard] },
-  { path: 'list', component: ListaComponent,canActivate:[LoginGuard] },
-  { path: 'list/:localita', component: ListaComponent,canActivate:[LoginGuard] },
+  { path: 'login', component: LoginComponent, canActivate:[CanactivateLoginGuard]},
+  
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule), canActivate:[LoginGuard]  },
+  { path: 'list', component: ListaComponent, canActivate:[LoginGuard] },
+  { path: 'list/:localita', component: ListaComponent, canActivate:[LoginGuard] },
   { path: 'dettaglio/:id', component: DettaglioViaggioComponent,canActivate:[LoginGuard] },
-  { path: 'feedback', component: FeedbackComponent,canActivate:[LoginGuard] },
-  { path: 'profilo', component: ProfiloComponent,canActivate:[LoginGuard] },
-  { path: 'modifica-profilo', component: ModificaProfiloComponent,canActivate:[LoginGuard] },
+  { path: 'feedback', component: FeedbackComponent, canActivate:[LoginGuard] },
+  { path: 'profilo', component: ProfiloComponent, canActivate:[LoginGuard] },
+  { path: 'modifica-profilo', component: ModificaProfiloComponent, canActivate:[LoginGuard] },
   { path: 'registrazione', component: RegistrazioneComponent, canActivate:[CanactivateLoginGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  
   { path: '**', component: PageNotFoundComponent },
 ]
 
